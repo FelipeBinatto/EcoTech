@@ -91,9 +91,32 @@ footer {
  height: 300px;
  border-radius: 2%;
  /* object-fit: cover; */
- margin-right: 10%;
- margin-left: 10%;
+ margin-right: auto;
+ margin-left: auto;
+ display: block;
  margin-top: 5%;
+}
 
+.colaboradores {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 5%;
+  padding: 0 15px;
+  /* Remove float and width to allow flex layout */
+}
 
+.colaborador-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.colaborador-item img {
+  margin-top: 5%;
+  margin-right: 10px;
+  width: 100px; /* Adjust image size as needed */
+  height: auto;
+  border-radius: 5px;
 }
