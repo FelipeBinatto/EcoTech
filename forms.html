@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="assets/IMG/logo_da_aba_de_pesquisa.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/forms.css">
+</head>
+<body>
+
+    <!-- Aqui é o menu-->
+
+    <nav class="menu">
+        <ul>
+          <li><div class="logo"><img src="assets/IMG/logo completa.png" ></div></li>
+          <li><a href="index.html">EcoTech</a></li>
+          <li><a href="sobre.html">Sobre nós</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="forms.html">Avalie seu produto</a></li>
+        </ul>
+      </nav>
+
+   
+    <form method="get" action="">
+
+        <main>
+            <br>
+            <br>
+            <h1> Avalie seu produto aqui! </h1>
+    <p> preencha o formulário para podermos avaliar seu produto </p><hr>
+    <br>
+            <label> <strong> Nome: </strong> </label>
+            <input type="text" name="nome" id="nome">
+             <br>
+
+            <!-- Campo de sobrenome-->
+
+             <br>
+            <label> <strong> Sobrenome: </strong> </label>
+            <input type="text" name="sobrenome" id="sobrenome">
+
+            <br>
+
+            <!--Campo de e-mail:  nesse caso o tipo já identifica o formato e-mail e a obrigatoriedade do @ em sua digitação-->
+
+            <br>
+            
+            <label> <strong> E-mail </strong> </label>
+            <input type="email" name="email" id="email">
+
+            <br>
+            <!--Campo de Gênero-->
+            <br>
+
+            <label> <strong> Qual o seu gênero? </strong> </label>
+            <label>
+                <br>
+            <input type="radio" name="genero" value="feminino" >Feminino
+            <br>
+            <input type="radio" name="genero" value="masculino"> Masculino
+            <br>
+            <input type="radio" name="genero" value="outro" >Outro
+            <br>
+            <input type="radio" name="genero" value="prefiro não informar" checked>Prefiro não informar
+            </label>
+
+            <br>
+           
+        
+    </main>
+
+        <br>
+
+        <!-- area de endereço-->
+
+        <main>
+       
+
+            <legend>Endereço do Usuário</legend>
+            <label><strong>Tipo de Logradouro</strong></label>
+            <select id="Logradouro">
+            <option> Selecione </option>
+            <option> Avenida </option>
+            <option> Estrada </option>
+            <option> Rua </option>
+        </select>
+<br>
+        <!--endereço-->
+        <br>
+
+        <label><strong>Endereço</strong></label>
+        <input type="text" name="endereço" id="endereço">
+<br>
+        <!--numero-->
+        <br>
+
+        <label><strong>Número</strong></label>
+        <input type="number" name="numero" id="numero">
+<br>
+        <!--bairro-->
+        <br>
+
+        <label><strong>Bairro</strong></label>
+        <input type="text" name="bairro" id="bairro">
+<br>
+        <!--cidade-->
+        <br>
+
+        <label><strong>Cidade</strong></label>
+        <input type="text" name="cidade" id="cidade">
+<br>
+        <!--CEP-->
+<br>
+
+        <label><strong>CEP</strong></label>
+        <input type="number" name="CEP" id="CEP">
+<br>
+        <!--estado-->
+        <br>
+
+        <label><strong>Estado</strong></label>
+        <select id="estado">
+            <option>AC</option>
+            <option>AL</option>
+            <option>AP</option>
+            <option>AM</option>
+            <option>BA</option>
+            <option>CE</option>
+            <option>DF</option>
+            <option>ES</option>
+            <option>GO</option>
+            <option>MA</option>
+            <option>MT</option>
+            <option>MS</option>
+            <option>MG</option>
+            <option>PA</option>
+            <option>PB</option>
+            <option>PR</option>
+            <option>PE</option>
+            <option>PI</option>
+            <option>RJ</option>
+            <option>RN</option>
+            <option>RS</option>
+            <option>RO</option>
+            <option>RR</option>
+            <option>SC</option>
+            <option>SP</option>
+            <option>SE</option>
+            <option>TO</option>
+        </select> 
+
+       
+        </main>
+
+        <!-- mensegem que o usuario ira escrever-->
+
+        <legend>Mensagem do Usuário</legend>
+
+            <label><strong>Descreva sobre as informações desejadas o mais detalhado possível</strong></label>
+            <br>
+            <textarea rows="6" style="width: 26em" id="experiencia" name="experiencia"></textarea>
+
+        </fieldset>
+        
+
+        <!--CAMPO DE ENVIO DE FOTO-->
+
+<h2>Envie uma Foto</h2>
+    
+<form action="processar_upload.php" method="POST" enctype="multipart/form-data">
+    <label for="foto">Escolha uma foto:</label>
+    <input type="file" name="foto" id="foto" accept="image/*">
+    
+    <br><br>
+    
+    <button onclick="mostrarAlert()">Enviar</button>
+
+    <script>
+        function mostrarAlert() {
+        alert("Enviaremos um email de resposta em até 7 dias úteis!")
+         }
+        </script>
+
+</form>
+        
+    </form>
+</body>
+</html>
