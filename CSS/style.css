@@ -120,3 +120,40 @@ footer {
   height: auto;
   border-radius: 5px;
 }
+
+.video-conteiner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 5%;
+  padding: 0 15px;
+  /* Remove float and width to allow flex layout */
+}
+
+.video-conteiner-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.colaborador-item video {
+  margin-top: 5%;
+  margin-right: 10px;
+  width: 100px; /* Adjust image size as needed */
+  height: auto;
+  border-radius: 5px;
+}
+
+.video-conteiner {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+video {
+  width: 45%;
+  max-width: 100%;
+  height: auto;
+}
