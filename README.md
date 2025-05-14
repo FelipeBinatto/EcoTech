@@ -33,6 +33,7 @@
 
 ### HTML – Estrutura
 - Criamos páginas como EcoTech (página principal do projeto), Sobre nós, Contato, Avalie seu produto (formulário).
+- Criamos um menu de navegação
 - Incluímos um formulário para o cliente no enviar fotos e descrição do equipamento.
 
 ### CSS – Estilo
