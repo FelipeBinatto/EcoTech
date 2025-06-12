@@ -151,9 +151,3 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
 }
-
-video {
-  width: 45%;
-  max-width: 100%;
-  height: auto;
-}
