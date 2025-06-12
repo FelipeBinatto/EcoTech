@@ -54,5 +54,14 @@
 - Acesse diretamente pelo navegador:  
 https://felipebinatto.github.io/EcoTech/
 
+### Acesso pelo computador
+
+**Baixe o projeto:**
+- Clique no botão verde **"Code"** no topo do repositório.
+- Selecione **"Download ZIP"**
+**Rode o projeto**
+- Dentro da página extraída, localize o carquivo chamado "index.html"
+- **Dê dois cliques no arquivo "index.html"** para abrir o site no navegador padrão
+  
 ## Vídeo de apresentação do projeto
 https://drive.google.com/file/d/1lnH_PEberWn6ft_JoK8T2THsOHVAHxsk/view?usp=drivesdk
