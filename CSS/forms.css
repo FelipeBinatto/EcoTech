@@ -1,109 +1,228 @@
+/* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #F5EEDD;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  margin: 5% 3%;
+}
+
+/* Menu principal */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #468236;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding-block: 15px 0;
+}
+
+
+/* Container do menu para alinhar conteúdo e largura */
+.menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* logo do menu */
+.menu-logo img {
+  height: 40px;
+  display: block;
+}
+
+/* Lista do menu desktop */
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+}
+
+/* espaçamento entre os itens */
+.menu ul li {
+  margin: 0 20px;
+}
+
+.menu ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s, border-bottom 0.3s;
+  padding-bottom: 4px;
+}
+
+/* hover nos links do menu */
+.menu ul li a:hover {
+  color: #1abc9c;
+  border-bottom: 2px solid #1abc9c;
+}
+
+/* Botão hamburguer - inicialmente escondido no desktop */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #ecf0f1;
+  cursor: pointer;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 28rem;
+  background: #ecf0f1;
+  padding: 4rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1.8rem rgba(0, 0, 0, 0.1);
+}
+
+label {
+  width: 100%;
+  color: #777;
+  align-self: flex-start;
+  transition: 0.15s linear;
+}
+
+.label:focus-within {
+  color: #42c83d;
+}
+
+input {
+  font-size: 1.1875rem;
+  color: brown;
+  padding: 1rem 0 0.5rem 0;
+  width: 100%;
+  border: none;
+  border-bottom: 1px dotted #a0a0a0;
+  margin-bottom: 3rem;
+  transition: 0.15s linear;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #468236;
+  color: white;
+}
+
+#menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #ecf0f1;
+  cursor: pointer;
+  position: relative;
+  z-index: 1100;
+  user-select: none;
+  padding: 0 20px;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+}
+
+#menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #ecf0f1;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* lista do menu principal */
+#menu-list {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menu-list li {
+  margin: 0;
+}
+
+
+/* --- RESPONSIVO --- */
+
+/* Quando a tela for menor ou igual a 768px */
+@media (max-width: 768px) {
+
+  /* mostra o botão hamburguer */
+  #menu-toggle {
+    display: block;
   }
-  
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
+
+  /* esconde a lista padrão */
+  .menu ul {
+    display: none;
   }
-  
-  .menu {
-    position: fixed;
-    top: 0;
+
+  #menu-list {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  /* mostra a lista com a classe ativada */
+  #menu-list.show {
+    display: flex !important;
+    position: absolute;
+    top: 60px;
     left: 0;
     width: 100%;
     background-color: #468236;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    z-index: 1000;
-    padding-block: 15px 0;
-  }
-  
-  .menu ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 15px 0;
-  }
-  
-  .menu ul li {
-    margin: 0 20px;
-  }
-  
-  .menu ul li a {
-    color: #ecf0f1;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s, border-bottom 0.3s;
-    padding-bottom: 4px;
-  }
-  
-  .menu ul li a:hover {
-    color: #1abc9c;
-    border-bottom: 2px solid #1abc9c;
+    padding: 10px 0;
+    z-index: 999;
   }
 
-    body{
-      min-height: 100vh;
-      background-color: #F5EEDD;
-      font-family: sans-serif;
-      display: grid;
-      place-items: center;
-      margin-top: 5%;
-      margin-left: 3%;
-      margin-bottom: 5%;
-      margin-right: 3%;
-    }
+  #menu-list li {
+    margin: 10px 0;
+    text-align: center;
+    width: 100%;
+  }
 
-    p{
-      font-size: 1.3125rem;
-      font-weight: 700;
-      color: #333;
-      margin-bottom: 5rem;
-    }
+  #menu-list li a {
+    font-size: 16px;
+    display: block;
+    width: 100%;
+  }
 
-    form{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      max-width: 28rem;
-      background: #ecf0f1;
-      padding: 4rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 0 1.8rem rgba(0,0,0,0.1);
-    }
+  .img-banner {
+    width: 90%;
+    height: auto;
+  }
 
-    label{
-      width: 100%;
-      color: #777;
-      align-self: flex-start;
-      transition: 0.15s linear;
-    }
+  h1,
+  h2 {
+    font-size: 24px;
+    margin: 30px 0 10px;
+  }
 
-    .label:focus-within{
-      color: #42c83d;
-    }
+  p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
 
-    imput{
-      font-size: 1.1875rem;
-      color:brown;
-      padding: 1rem 0 0.5rem 0;
-      width: 100%;
-      border: none;
-      border-color: #a0a0a0;
-      border: bottom width 1px;
-      border-bottom-style: dotted;
-      margin-bottom: 3rem;
-      transition: 0.15s linear
-    }
-
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #468236;
-      color: white;
-    }
+  body {
+    padding-top: 100px;
+  }

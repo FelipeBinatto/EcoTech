@@ -12,15 +12,18 @@
 
     <!-- Aqui é o menu-->
 
-    <nav class="menu">
-        <ul>
-          <li><div class="logo"><img src="assets/IMG/logo completa.png" ></div></li>
-          <li><a href="index.html">EcoTech</a></li>
-          <li><a href="sobre.html">Sobre nós</a></li>
-          <li><a href="contato.html">Contato</a></li>
-          <li><a href="forms.html">Avalie seu produto</a></li>
-        </ul>
-      </nav>
+     <nav class="menu">
+  <div class="menu-container">
+    <div class="logo"><img src="assets/IMG/logo completa.png" alt="Logo"></div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <ul id="menu-list">
+      <li><a href="index.html">EcoTech</a></li>
+      <li><a href="sobre.html">Sobre nós</a></li>
+      <li><a href="contato.html">Contato</a></li>
+      <li><a href="forms.html">Avalie seu produto</a></li>
+    </ul>
+  </div>
+</nav>
 
    
     <form method="get" action="">
@@ -177,11 +180,8 @@
     
     <button onclick="mostrarAlert()">Enviar</button>
 
-    <script>
-        function mostrarAlert() {
-        alert("Enviaremos um email de resposta em até 7 dias úteis!")
-         }
-        </script>
+        <script src="JS/menu.js"></script>
+        <script src="JS/forms.js"></script>
 
 </form>
         
