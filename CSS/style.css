@@ -18,7 +18,7 @@ body {
   left: 0;
   width: 100%;
   background-color: #468236;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   padding-block: 15px 0;
 }
@@ -70,9 +70,9 @@ p {
   padding: 0 20px;
 }
 
-body{
+body {
   font-family: "Segoe UI",
-  sans-serif;
+    sans-serif;
   background-color: #F5EEDD;
   color: #333;
   line-height: 1.6;
@@ -86,48 +86,15 @@ footer {
   color: white;
 }
 
-.img-banner{
- width: 1000px;
- height: 300px;
- border-radius: 2%;
- /* object-fit: cover; */
- margin-right: auto;
- margin-left: auto;
- display: block;
- margin-top: 5%;
-}
-
-.colaboradores {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+.img-banner {
+  width: 1000px;
+  height: 300px;
+  border-radius: 2%;
+  /* object-fit: cover; */
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
   margin-top: 5%;
-  padding: 0 15px;
-  /* Remove float and width to allow flex layout */
-}
-
-.colaborador-item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-right: 30px;
-}
-
-.colaborador-item img {
-  margin-top: 5%;
-  margin-right: 10px;
-  width: 100px; /* Adjust image size as needed */
-  height: auto;
-  border-radius: 5px;
-}
-
-.video-conteiner {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin-top: 5%;
-  padding: 0 15px;
-  /* Remove float and width to allow flex layout */
 }
 
 .video-conteiner-item {
@@ -137,12 +104,11 @@ footer {
   margin-right: 30px;
 }
 
-.colaborador-item video {
-  margin-top: 5%;
-  margin-right: 10px;
-  width: 100px; /* Adjust image size as needed */
+.video-conteiner video{
+  border-radius: 15px;
+  width: 100%;
   height: auto;
-  border-radius: 5px;
+  max-width: 400px;
 }
 
 .video-conteiner {
@@ -150,4 +116,76 @@ footer {
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-start;
+  margin-top: 5%;
+  padding: 0 15px;
+}
+
+.equipe {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.membro {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 200px;
+  height: 300px;
+}
+
+.membro img {
+  width: 100%;
+  height: 300px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.membro figcaption {
+  border-radius: 20px;
+  font-size: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.4s;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.membro:hover figcaption {
+  opacity: 1;
+}
+
+.container-membros {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+@media (max-width: 768px){
+  .container{
+    flex-direction: column;
+  }
+  .membro{
+    width: 100%;
+  }
+  video{
+    width: 100%;
+    height: auto;
+  }
 }
