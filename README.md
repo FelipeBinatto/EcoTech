@@ -47,6 +47,9 @@
 
 ---
 
+## Vídeo de apresentação do projeto
+https://drive.google.com/file/d/1lnH_PEberWn6ft_JoK8T2THsOHVAHxsk/view?usp=drivesdk
+
 ## 6. Ações necessárias para acessar o projeto
 
 ### Acesso via GitHub Pages (sem instalar nada)
@@ -77,8 +80,4 @@ Se preferir clonar o projeto diretamente com Git, execute o comando abaixo no te
 
 ```bash
 git clone https://github.com/FelipeBinatto/EcoTech0905.git
-cd EcoTech0905```
-
-
-## Vídeo de apresentação do projeto
-https://drive.google.com/file/d/1lnH_PEberWn6ft_JoK8T2THsOHVAHxsk/view?usp=drivesdk
+cd EcoTech0905
