@@ -54,5 +54,31 @@
 - Acesse diretamente pelo navegador:  
 https://felipebinatto.github.io/EcoTech/
 
+## 7. Como rodar o projeto localmente
+
+### Passo a passo
+1. **Baixe os arquivos do projeto:**
+   - Acesse o repositório no GitHub:  
+     [https://github.com/FelipeBinatto/EcoTech0905](https://github.com/FelipeBinatto/EcoTech0905)
+   - Clique em **Code** > **Download ZIP**.
+   - Extraia o conteúdo do ZIP em uma pasta do seu computador.
+
+2. **Abra o projeto:**
+   - Localize o arquivo `index.html`.
+   - Clique duas vezes sobre ele ou abra com o navegador de sua preferência.
+   - O site será exibido normalmente, mesmo sem internet.
+
+### Requisitos
+- **Não é necessário instalar nenhum programa.**
+- Para editar ou visualizar o código, recomendamos o editor **Visual Studio Code**.
+
+### (Opcional) Clonar via Git
+Se preferir clonar o projeto diretamente com Git, execute o comando abaixo no terminal:
+
+```bash
+git clone https://github.com/FelipeBinatto/EcoTech0905.git
+cd EcoTech0905
+
+
 ## Vídeo de apresentação do projeto
 https://drive.google.com/file/d/1lnH_PEberWn6ft_JoK8T2THsOHVAHxsk/view?usp=drivesdk
