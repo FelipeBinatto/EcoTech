@@ -195,16 +195,35 @@ footer {
   margin: 0;
 }
 
-/* RESPONSIVO */
 @media (max-width: 768px) {
+  /* já existente: */
   #menu-toggle {
     display: block;
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+    color: #ecf0f1;
+    background: none;
+    border: none;
+    padding: 0 20px;
+    flex-shrink: 0;
+
+    /* novos ajustes para alinhar à direita */
+    margin-left: auto;
+    transition: color 0.3s;
   }
 
+  /* hover do menu hambúrguer */
+  #menu-toggle:hover {
+    color: #1abc9c;
+  }
+
+  /* esconder menu desktop */
   .menu ul {
     display: none;
   }
 
+  /* menu mobile */
   #menu-list {
     display: none;
     flex-direction: column;
@@ -234,6 +253,33 @@ footer {
     width: 100%;
   }
 
+  /* aqui o alinhamento da logo e do container do menu */
+  .menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* logo esquerda, hambúrguer direita */
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  .logo {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .logo img {
+    height: 30px !important;
+    display: block;
+  }
+
+  /* ajustes visuais para menu fixo menor */
+  .menu {
+    height: 60px !important;
+    padding: 5px 10px !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
   .img-banner {
     width: 90%;
     height: auto;
@@ -254,6 +300,7 @@ footer {
     padding-top: 100px;
   }
 }
+
 
 #genero-group label {
   display: flex;
