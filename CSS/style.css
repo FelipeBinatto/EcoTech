@@ -249,34 +249,57 @@ footer {
   margin: 0;
 }
 
-/* mobile: responsivo */
 @media (max-width: 768px) {
-  /* mostra o botão hamburguer */
+  /* Mostra o botão hamburguer */
   #menu-toggle {
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+    color: #ecf0f1;
+    background: none;
+    border: none;
+    padding: 0;
+    margin-right: 0; /* empurra para direita */
+    display: block;
+    transition: color 0.3s;
+  }
+
+  /* Efeito hover do botão hamburguer */
+  #menu-toggle:hover {
+    color: #1abc9c;
+  }
+
+  /* Container do menu: logo esquerda, botão direita */
+  .menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* logo left, menu right */
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  /* Logo */
+  .logo {
+    margin-left: 0;
+  }
+
+  .logo img {
+    height: 30px !important;
     display: block;
   }
 
-  /* esconde a lista padrão */
+  /* Esconde lista padrão */
   .menu ul {
     display: none;
   }
-  
-  .menu-container .logo img{
-    height: 40px;
-  }
 
-  .menu-toggle{
-    font-size: 30px;
-    cursor: pointer;
-  }
-
+  /* Lista do menu mobile (quando ativa) */
   #menu-list {
     display: none;
     flex-direction: column;
     gap: 0;
   }
 
-  /* mostra a lista com a classe ativada */
   #menu-list.show {
     display: flex !important;
     position: absolute;
@@ -286,6 +309,8 @@ footer {
     background-color: #468236;
     padding: 10px 0;
     z-index: 999;
+    flex-direction: column;
+    align-items: center;
   }
 
   #menu-list li {
@@ -300,23 +325,19 @@ footer {
     width: 100%;
   }
 
-  .menu-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
+  /* Ajustes no menu fixo */
+  .menu {
+    height: 60px !important;
+    padding: 5px 10px !important;
+    align-items: center !important;
+    justify-content: space-between !important;
   }
 
+  /* Ajustes visuais */
   .img-banner {
     width: 90%;
     height: auto;
   }
-
-  .menu{
-    height: 10vh;
-    padding-block: 5px;
-  }
-
 
   h1,
   h2 {
@@ -355,5 +376,7 @@ footer {
     padding-top: 100px;
   }
 }
+
+
 
 
