@@ -77,7 +77,7 @@ Se preferir clonar o projeto diretamente com Git, execute o comando abaixo no te
 
 ```bash
 git clone https://github.com/FelipeBinatto/EcoTech0905.git
-cd EcoTech0905
+cd EcoTech0905```
 
 
 ## Vídeo de apresentação do projeto
