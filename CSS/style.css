@@ -346,12 +346,12 @@ footer {
   }
 
   .video-conteiner {
-    flex-direction: column;
+    flex-direction: row;
     gap: 15px;
   }
 
   .equipe {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
 
