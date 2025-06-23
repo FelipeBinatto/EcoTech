@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/IMG/logo_da_aba_de_pesquisa.png" type="image/png">
     <title>Avaliação de Produto</title>
+    <script src="https://kit.fontawesome.com/0d0e73c355.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="CSS/forms.css">
 </head>
 
@@ -15,17 +16,28 @@
 
         <!-- Menu -->
         <nav class="menu">
-            <div class="menu-container">
-                <div class="logo"><img src="assets/IMG/logo completa.png" alt="Logo"></div>
-                <div class="menu-toggle" id="menu-toggle">☰</div>
-                <ul id="menu-list">
-                    <li><a href="index.html">EcoTech</a></li>
-                    <li><a href="sobre.html">Sobre nós</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                    <li><a href="forms.html">Avalie seu produto</a></li>
-                </ul>
-            </div>
-        </nav>
+  <div class="menu-container">
+    <div class="logo"><img src="assets/IMG/logo completa.png" alt="Logo"></div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <ul id="menu-list">
+      <li><a href="index.html">EcoTech</a></li>
+      <li><a href="sobre.html">Sobre nós</a></li>
+      <li><a href="contato.html">Contato</a></li>
+      <li><a href="forms.html">Avalie seu produto</a></li>
+      <div>
+        <li>
+    <input type="checkbox" class="checkbox" id="chk" />
+    <label class="label" for="chk">
+    <i class="fas fa-moon"></i>
+    <i class="fas fa-sun"></i>
+    <div class="ball"></div>
+    </label>
+      </li>
+
+      </div>
+    </ul>
+  </div>
+</nav>
 
         <main>
             <h1>Avalie seu produto aqui!</h1>
@@ -42,82 +54,112 @@
             <input type="email" name="email" id="email" required><br><br>
 
 
-<label><strong>Qual o seu gênero?</strong></label>
-<div id="genero-group" style="margin-bottom: 1rem;">
-    <div style="display: flex; align-items: center; margin-bottom: 5px; flex-direction: row-reverse;">
-    <input type="radio" name="genero" value="Feminino" style="margin-right: 5px;">
-  <label for="Feminino" style="margin-right: 5px;"> Feminino</label></div>
-  <br>
+            <label><strong>Qual o seu gênero?</strong></label>
+            <div id="genero-group" style="margin-bottom: 1rem;">
+                <div style="display: flex; align-items: center; margin-bottom: 5px; flex-direction: row-reverse;">
+                    <input type="radio" name="genero" value="Feminino" style="margin-right: 5px;">
+                    <label for="Feminino" style="margin-right: 5px;"> Feminino</label>
+                </div>
+                <br>
 
-  <div id="genero-group" style="margin-bottom: 1rem;">
-    <div style="display: flex; align-items: center; margin-bottom: 5px; flex-direction: row-reverse;">
-    <input type="radio" name="genero" value="Masculino" style="margin-right: 5px;">
-  <label for="Masculino" style="margin-right: 5px;"> Masculino</label></div>
-  <br>
+                <div id="genero-group" style="margin-bottom: 1rem;">
+                    <div style="display: flex; align-items: center; margin-bottom: 5px; flex-direction: row-reverse;">
+                        <input type="radio" name="genero" value="Masculino" style="margin-right: 5px;">
+                        <label for="Masculino" style="margin-right: 5px;"> Masculino</label>
+                    </div>
+                    <br>
 
-  <div id="genero-group" style="margin-bottom: 1rem;">
-    <div style="display: flex; align-items: center; margin-bottom: 5px; flex-direction: row-reverse;">
-    <input type="radio" name="genero" value="Outro" style="margin-right: 5px;">
-  <label for="Outro" style="margin-right: 5px;"> Outro</label></div>
-  <br>
+                    <div id="genero-group" style="margin-bottom: 1rem;">
+                        <div
+                            style="display: flex; align-items: center; margin-bottom: 5px; flex-direction: row-reverse;">
+                            <input type="radio" name="genero" value="Outro" style="margin-right: 5px;">
+                            <label for="Outro" style="margin-right: 5px;"> Outro</label>
+                        </div>
+                        <br>
 
-  <div id="genero-group" style="margin-bottom: 1rem;">
-    <div style="display: flex; align-items: center; margin-bottom: 5px; flex-direction: row-reverse;">
-    <input type="radio" name="genero" value="Prefiro não informar" style="margin-right: 5px;">
-  <label for="Prefiro não informar style="margin-right: 5px;"> Prefiro não informar</label></div>
-  <br>
+                        <div id="genero-group" style="margin-bottom: 1rem;">
+                            <div
+                                style="display: flex; align-items: center; margin-bottom: 5px; flex-direction: row-reverse;">
+                                <input type="radio" name="genero" value="Prefiro não informar"
+                                    style="margin-right: 5px;">
+                                <label for="Prefiro não informar style=" margin-right: 5px;"> Prefiro não
+                                    informar</label>
+                            </div>
+                            <br>
 
-            <fieldset>
-                <legend>Endereço do Usuário</legend>
 
-                <label><strong>Tipo de Logradouro:</strong></label>
-                <select id="Logradouro" required>
-                    <option value="">Selecione</option>
-                    <option>Avenida</option>
-                    <option>Estrada</option>
-                    <option>Rua</option>
-                </select><br><br>
+                            <legend>Endereço do Usuário</legend>
 
-                <label><strong>Endereço:</strong></label>
-                <input type="text" name="endereco" id="endereco" required><br><br>
+                            <label><strong>Tipo de Logradouro:</strong></label>
+                            <select id="Logradouro" required>
+                                <option value="">Selecione</option>
+                                <option>Avenida</option>
+                                <option>Estrada</option>
+                                <option>Rua</option>
+                            </select><br><br>
 
-                <label><strong>Número:</strong></label>
-                <input type="number" name="numero" id="numero" required min="1" step="1"><br><br>
+                            <label><strong>Endereço:</strong></label>
+                            <input type="text" name="endereco" id="endereco" required><br><br>
 
-                <label><strong>Bairro:</strong></label>
-                <input type="text" name="bairro" id="bairro" required><br><br>
+                            <label><strong>Número:</strong></label>
+                            <input type="number" name="numero" id="numero" required min="1" step="1"><br><br>
 
-                <label><strong>Cidade:</strong></label>
-                <input type="text" name="cidade" id="cidade" required><br><br>
+                            <label><strong>Bairro:</strong></label>
+                            <input type="text" name="bairro" id="bairro" required><br><br>
 
-                <label><strong>CEP:</strong></label>
-                <input type="text" name="CEP" id="CEP" required pattern="\d{5}-?\d{3}" maxlength="9"><br><br>
+                            <label><strong>Cidade:</strong></label>
+                            <input type="text" name="cidade" id="cidade" required><br><br>
 
-                <label><strong>Estado:</strong></label>
-                <select id="estado" required>
-                    <option value="">Selecione</option>
-                    <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
-                    <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
-                    <option>GO</option><option>MA</option><option>MT</option><option>MS</option>
-                    <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
-                    <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
-                    <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
-                    <option>SP</option><option>SE</option><option>TO</option>
-                </select>
-            </fieldset><br>
+                            <label><strong>CEP:</strong></label>
+                            <input type="text" name="CEP" id="CEP" required pattern="\d{5}-?\d{3}"
+                                maxlength="9"><br><br>
 
-            <fieldset>
-                <legend>Mensagem do Usuário</legend>
-                <label><strong>Descreva as informações desejadas:</strong></label><br>
-                <textarea rows="6" style="width: 26em" id="experiencia" name="experiencia" required></textarea>
-            </fieldset><br>
+                            <label><strong>Estado:</strong></label>
+                            <select id="estado" required>
+                                <option value="">Selecione</option>
+                                <option>AC</option>
+                                <option>AL</option>
+                                <option>AP</option>
+                                <option>AM</option>
+                                <option>BA</option>
+                                <option>CE</option>
+                                <option>DF</option>
+                                <option>ES</option>
+                                <option>GO</option>
+                                <option>MA</option>
+                                <option>MT</option>
+                                <option>MS</option>
+                                <option>MG</option>
+                                <option>PA</option>
+                                <option>PB</option>
+                                <option>PR</option>
+                                <option>PE</option>
+                                <option>PI</option>
+                                <option>RJ</option>
+                                <option>RN</option>
+                                <option>RS</option>
+                                <option>RO</option>
+                                <option>RR</option>
+                                <option>SC</option>
+                                <option>SP</option>
+                                <option>SE</option>
+                                <option>TO</option>
+                            </select>
+                            <br>
 
-            <h2>Envie uma Foto</h2>
-            <label for="foto">Escolha uma foto:</label>
-            <input type="file" name="foto" id="foto" accept="image/*" required><br><br>
 
-            <button type="submit">Enviar</button>
-        </main>
+                            <legend>Mensagem do Usuário</legend>
+                            <label><strong>Descreva as informações desejadas:</strong></label><br>
+                            <textarea rows="6" style="width: 26em" id="experiencia" name="experiencia"
+                                required></textarea>
+                            <br>
+
+                            <h2>Envie uma Foto</h2>
+                            <label for="foto">Escolha uma foto:</label>
+                            <input type="file" name="foto" id="foto" accept="image/*" required><br><br>
+
+                            <button type="submit">Enviar</button>
+
     </form>
 
     <!-- Scripts fora do form -->
