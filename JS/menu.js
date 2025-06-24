@@ -8,21 +8,4 @@ document.addEventListener("DOMContentLoaded", () => {
     menuList.classList.toggle("show");
   });
 
-  // Dark mode toggle
-  chk.addEventListener("change", () => {
-    document.body.classList.toggle("dark");
-
-    // Salvar preferência
-    if (document.body.classList.contains("dark")) {
-      localStorage.setItem("modo", "dark");
-    } else {
-      localStorage.setItem("modo", "light");
-    }
-  });
-
-  // Carregar preferência
-  if (localStorage.getItem("modo") === "dark") {
-    document.body.classList.add("dark");
-    chk.checked = true;
-  }
-});
+})
