@@ -87,7 +87,7 @@ form {
   align-items: center;
   width: 100%;
   max-width: 30rem;
-  background: #ffffff;
+  background: #F5EEDD;
   background: var(--base-variant);
   padding: 3rem;
   border-radius: 0.8rem;
@@ -144,13 +144,6 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: #346329;
-}
-
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #468236;
-  color: white;
 }
 
 #menu-toggle {
@@ -356,7 +349,7 @@ body.dark {
 
 :root {
   --base-color: #F5EEDD;
-  --base-variant: white;
+  --base-variant: #f1f0eb;
   --text-color: black;
   --secondary-text: #333;
   --primary-color: #468236;

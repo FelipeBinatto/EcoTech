@@ -225,6 +225,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
 }
 
 
@@ -456,3 +457,4 @@ footer {
   background-color: #2d593f;
   color: white;
 }
+
