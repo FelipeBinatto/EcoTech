@@ -39,5 +39,33 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// Função para obter a geolocalização pelo IP
+async function obterGeolocalizacao(ip) {
+  const url = `https://pointp.in/api/v1/ip/${ip}`;
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Erro na requisição: ${response.status} ${response.statusText}`);
+    }
+    const dados = await response.json();
+    return dados;
+  } catch (e) {
+    console.error(`Erro ao fazer requisição: ${e}`);
+    return null;
+  }
+}
+
+// Exemplo de uso
+const ipAlvo = "https://pointp.in/"; // Substitua pelo IP que deseja consultar
+
+obterGeolocalizacao(ipAlvo).then(informacoes => {
+  if (informacoes) {
+    console.log("Dados de geolocalização:");
+    console.log(informacoes);
+  } else {
+    console.log("Não foi possível obter as informações.");
+  }
+});
+
 
 

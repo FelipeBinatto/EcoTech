@@ -240,8 +240,7 @@ footer {
         display: block;
         width: 100%;
     }
-
-    /* Ajustes no menu fixo */
+    
     .menu {
         height: 60px !important;
         padding: 5px 10px !important;
@@ -249,7 +248,6 @@ footer {
         justify-content: space-between !important;
     }
 
-    /* Ajustes visuais */
     .img-banner {
         width: 90%;
         height: auto;
@@ -259,7 +257,18 @@ footer {
     h2 {
         font-size: 24px;
         margin: 30px 0 10px;
+        text-align: center;
     }
+
+    h3 {
+        text-align: center;
+        margin: 40px 0 10px;
+        font-size: 32px;
+        color: #1a1818;
+        color: var(--text-color);
+    }
+
+
 
     p {
         font-size: 16px;
@@ -281,6 +290,10 @@ footer {
         z-index: 999;
         flex-direction: column;
         align-items: center;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
@@ -347,10 +360,13 @@ footer {
 .container-slider {
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: auto;
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
 .container-images {
@@ -359,14 +375,23 @@ footer {
     align-items: center;
     justify-content: center;
     width: 400px;
+    height: 300px;
+    /* Altura fixa para evitar distorção */
+    overflow: hidden;
 }
 
 .slider {
     opacity: 0;
-    transition: opacity .2s;
+    transition: opacity 0.2s;
     position: absolute;
     width: 100%;
+    height: 100%;
+    /* Garante que a imagem preencha o container */
     border-radius: 20px;
+    object-fit: cover;
+    /* Mantém a proporção sem esticar */
+    image-rendering: auto;
+    /* Melhora a qualidade visual */
 }
 
 .on {
@@ -386,4 +411,44 @@ footer {
 #next-button img {
     width: 100%;
     height: 100%;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.card {
+    background-color: #f4f4f4;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #1f1f1f;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+@media (min-width: 1100px) {
+    .cards-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
