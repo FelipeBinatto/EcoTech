@@ -414,3 +414,104 @@ body.dark {
 .darkmode h2{
   color: #fcfaf6
 }
+
+/* estlização pontos de coleta*/
+
+#btn-buscar {
+  background-color: #2e7d32;         
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+#btn-buscar:hover {
+  background-color: #346329;         
+  transform: translateY(-2px);
+}
+
+#btn-buscar:active {
+  transform: translateY(1px);
+  background-color: #1b5e20;
+}
+
+
+
+#pontos-coleta-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#lista-pontos {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  color: #1b1b1b;
+}
+
+#lista-pontos li {
+  margin: 10px auto;
+  padding: 10px;
+  max-width: 500px;
+  background-color: #e8f5e9;  
+  border-left: 5px solid #2e7d32;
+  border-radius: 6px;
+  text-align: left;
+}
+
+.upload-box button {
+  background-color: #2e7d32; /* verde escuro normal */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+.upload-box label {
+  font-weight: 600;
+  color: #065f46;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.upload-box input[type="file"] {
+  border: 2px dashed #86efac;
+  background-color: #ecfdf5;
+  padding: 12px;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: border 0.3s;
+}
+
+.upload-box input[type="file"]:hover {
+  border-color: #4ade80;
+}
+
+.upload-box button {
+  background-color: #2e7d32;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 7px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.upload-box button:hover {
+  background-color: #346329; /* verde claro no hover */
+}

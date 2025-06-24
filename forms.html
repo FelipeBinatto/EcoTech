@@ -46,13 +46,13 @@
             <p>Preencha o formulário para podermos avaliar seu produto</p>
             <hr><br>
 
-            <label><strong>Nome:</strong></label>
+            <label>Nome:</label>
             <input type="text" name="nome" id="nome" required><br><br>
 
-            <label><strong>Sobrenome:</strong></label>
+            <label>Sobrenome:</label>
             <input type="text" name="sobrenome" id="sobrenome" required><br><br>
 
-            <label><strong>E-mail:</strong></label>
+            <label>E-mail</label>
             <input type="email" name="email" id="email" required><br><br>
 
 
@@ -157,16 +157,21 @@
                             <br>
 
                             <h2>Envie uma Foto</h2>
-                            <label for="foto">Escolha uma foto:</label>
-                            <input type="file" name="foto" id="foto" accept="image/*" required><br><br>
-                            
-                            <button type="submit">Enviar</button>
+                            <div class="upload-box">
+                                <label for="foto">Escolha uma foto:</label>
+                                <input type="file" name="foto" id="foto" accept="image/*" required>
+                                <button type="submit">Enviar</button>
+                            </div>
 
     </form>
 
+    <section id="pontos-coleta-container" style="margin-top: 2em;">
+        <button id="btn-buscar" type="button">Buscar pontos de descarte próximos</button>
+        <ul id="lista-pontos"></ul>
+    </section>
 
 </body>
-<!-- Scripts -->
+
 <script src="JS/menu.js"></script>
 <script src="JS/forms.js"></script>
 <script src="JS/theme.js"></script>
