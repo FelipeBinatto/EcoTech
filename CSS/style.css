@@ -420,6 +420,9 @@ footer {
   --secondary-text: #333;
   --primary-color: #468236;
   --accent-color: #1abc9c;
+  --Importante: rgb(103, 170, 118);
+  --cards: #71a862; 
+  --terceira-cor: #000000;
 }
 
 .darkmode {
@@ -429,6 +432,9 @@ footer {
   --secondary-text: #f0eded;
   --primary-color: #468236;
   --accent-color: #1abc9c;
+  --Importante: rgb(8, 110, 30);
+  --cards: rgb(102, 136, 111);
+  --terceira-cor: #000000;
 }
 
 #theme-switch {
@@ -516,7 +522,6 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 84px 20px;
   text-align: center;
 }
 
@@ -680,5 +685,7 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #1b7d47;
 }
+
+
 
 
