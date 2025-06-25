@@ -119,6 +119,21 @@ textarea {
   transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
+.darkmode select {
+  background-color: #696767;
+  color: #eee;
+  border: 1px solid #8d8c8c;
+  border-radius: 5px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.darkmode select option {
+  background-color: #696767;
+  color: #eee;
+}
+
 input:focus,
 select:focus,
 textarea:focus {
@@ -126,6 +141,68 @@ textarea:focus {
   border-color: #468236;
   background-color: #eafbe7;
 }
+
+.darkmode input,
+.darkmode textarea {
+  background-color: #696767; 
+  color: #eee;           
+  border: 1px solid #8d8c8c;
+}
+
+.darkmode input:focus,
+.darkmode select:focus,
+.darkmode textarea:focus {
+  background-color: #555; 
+  border-color: #468236;  
+  color: #eee;            
+  outline: none;
+}
+
+.darkmode .upload-box input[type="file"] {
+  border: 2px dashed #555;
+  background-color: #3a3a3a;
+  color: #eee;
+  padding: 12px;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: border 0.3s;
+}
+
+.darkmode .upload-box input[type="file"]:hover {
+  border-color: #76c891;
+}
+
+/* Estilo normal do botão "Escolher arquivo" */
+input[type="file"]::-webkit-file-upload-button {
+  color: #fff;
+  background: #468236;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+  background: #346329;
+}
+
+.darkmode input[type="file"]::-webkit-file-upload-button {
+  color: #fff;
+  background: #3e6d34;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.darkmode input[type="file"]::-webkit-file-upload-button:hover {
+  background: #2e7d32;
+}
+
 
 button[type="submit"] {
   background-color: #468236;
@@ -414,6 +491,8 @@ body.dark {
 .darkmode h2{
   color: #fcfaf6
 }
+
+
 
 /* estlização pontos de coleta*/
 

@@ -421,7 +421,7 @@ footer {
   --primary-color: #468236;
   --accent-color: #1abc9c;
   --Importante: rgb(103, 170, 118);
-  --cards: #71a862; 
+  --cards: #FFFDF5; 
   --terceira-cor: #000000;
 }
 
@@ -486,11 +486,12 @@ footer {
 }
 
 .card {
-  background-color: #f4f4f4;
+  background-color: var(--cards);
+  color: var(--text-color);
   border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .card:hover {
@@ -499,13 +500,13 @@ footer {
 
 .card h3 {
   margin-top: 0;
-  color: #1f1f1f;
+  color: var(--text-color);
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
 }
 
 .card p {
-  color: #444;
+  color: var(--secondary-text);
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -514,6 +515,24 @@ footer {
   .cards-container {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+.darkmode .cards-container {
+  background-color: #222;
+}
+
+.darkmode .card {
+  background-color: rgb(102, 136, 111); 
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.darkmode .card h3 {
+  color: white;
+}
+
+.darkmode .card p {
+  color: #f0eded;
 }
 
 /*Página de Contato*/
@@ -687,5 +706,56 @@ button[type="submit"]:hover {
 }
 
 
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  color: #000;
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
 
+.darkmode select {
+  background-color: #696767;
+  color: #eee;
+  border: 1px solid #8d8c8c;
+  border-radius: 5px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.darkmode select option {
+  background-color: #696767;
+  color: #eee;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #468236;
+  background-color: #eafbe7;
+}
+
+.darkmode input,
+.darkmode textarea {
+  background-color: #696767; 
+  color: #eee;           
+  border: 1px solid #8d8c8c;
+}
+
+.darkmode input:focus,
+.darkmode select:focus,
+.darkmode textarea:focus {
+  background-color: #555; 
+  border-color: #468236;  
+  color: #eee;            
+  outline: none;
+}
 

@@ -465,6 +465,7 @@ footer {
     color: #1f1f1f;
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 .card p {
@@ -477,4 +478,27 @@ footer {
     .cards-container {
         grid-template-columns: repeat(3, 1fr);
     }
+}
+
+ .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+
+.darkmode .cards-container {
+  background-color: #222;
+}
+
+.darkmode .card {
+  background-color: rgb(102, 136, 111); 
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.darkmode .card h3 {
+  color: white;
+}
+
+.darkmode .card p {
+  color: #f0eded;
 }
