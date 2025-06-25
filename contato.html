@@ -38,21 +38,124 @@
         d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z" />
     </svg>
   </button>
+<section class="page-title">
+    <h1>Nossos Contatos</h1>
 
-  <h1>Fale Conosco</h1>
-  <p>Entre em contato pelo e-mail <br> <strong>eco.tech@gmail.com</strong></p>
-  <br>
-  <h1>Nos siga nas nossas redes sociais!!</h1>
-  <p> <strong>Instagram:</strong> EcoTech_of</p>
-  <p><strong>X:</strong> EcoTech_of</p>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  
+    <p>Tem alguma duvida ou alguma reclamação a fazer? Nossa equipe está a disposição para ajudar
+      você em qualquer dificultade que tiver desde o descarte até a compra de um novo</p>
+  </section>
 
+
+  <main id="main_container">
+    <section id="contacts_container">
+      <h3>Entre em contato</h3>
+      <p> Preencha o formulário ao lado e entraremos em contato com você o mais rápido possível.</p>
+
+      <div id="cards_container">
+        <a href="tel:+5511996783467" target="_blank" class="contact-card phone">
+          <div class="card-icon">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+
+          <div class="card-infos">
+            <p> Telefone</p>
+            <span>
+              (11) 99678-3467
+            </span>
+
+          </div>
+        </a>
+
+        <a href="https://maps.app.goo.gl/ZU7GwXSLafMAJsMy8" target="_blank" class="contact-card location">
+          <div class="card-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+
+          <div class="card-infos">
+            <p> Localização</p>
+            <span>
+            Av. Tiradentes, 1211 - Parque Industrial, Itu - SP, 13309-640
+            </span>
+
+          </div>
+        </a>
+      </div>
+      <a href="mailto:email@gmail.com" target="_blank" class="contact-card email">
+        <div class="card-icon">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+
+        <div class="card-infos">
+          <p>E-mail</p>
+          <span>
+          eco.tech@gmail.com
+          </span>
+
+        </div>
+      </a>
+      <br>
+      <a href="https://api.whatsapp.com/send?phone=5511996783467" target="_blank" class="contact-card whatsapp">
+        <div class="card-icon">
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+
+        <div class="card-infos">
+          <p>Whatsapp</p>
+          <span>
+            (11) 99678-3467
+          </span>
+
+        </div>
+      </a>
+      <h4> Nos siga nas redes sociais</h4>
+
+      <div id="social_media_icons">
+        <a href="#" class="icon-link twitter">
+          <i class="fa-brands fa-x-twitter "></i>
+        </a>
+        <a href="#" class="icon-link instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+</section>
+      <section id="contact_form_container">
+        <h3>
+          Contatar
+        </h3>
+        <form method="post" id="contact_form">
+          <div class="input-group">
+            <label for="name">
+              Nome
+            </label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="input-group">
+              <label for="email">E-mail</label>
+<input type="email" id="email" name="email" required>
+            </label>
+
+          </div>
+
+          <div class="input-group">
+            <label for="subject">
+              Assunto
+            </label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+
+          <div class="input-group">
+            <label for="message">
+              Mensagem
+            </label>
+            <textarea name="message" id="message" required rows="5"></textarea>
+
+          </div>
+
+          <button type="submit">Enviar</button>
+        </form>
+    </section>
+  </main>
 
   <footer>Tecnologia que se renova. Sustentabilidade que se transforma</footer>
 
@@ -61,5 +164,6 @@
 
 <script src="JS/menu.js"></script>
 <script src="JS/theme.js"></script>
+<script src="JS/forms.js"></script>
 
 </html>
