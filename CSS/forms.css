@@ -144,17 +144,17 @@ textarea:focus {
 
 .darkmode input,
 .darkmode textarea {
-  background-color: #696767; 
-  color: #eee;           
+  background-color: #696767;
+  color: #eee;
   border: 1px solid #8d8c8c;
 }
 
 .darkmode input:focus,
 .darkmode select:focus,
 .darkmode textarea:focus {
-  background-color: #555; 
-  border-color: #468236;  
-  color: #eee;            
+  background-color: #555;
+  border-color: #468236;
+  color: #eee;
   outline: none;
 }
 
@@ -434,8 +434,8 @@ body.dark {
 }
 
 .darkmode {
-  --base-color: #000000;      
-  --base-variant: #272727;       
+  --base-color: #000000;
+  --base-variant: #272727;
   --text-color: #ffffff;
   --secondary-text: #cccccc;
   --primary-color: #468236;
@@ -447,7 +447,7 @@ body.dark {
   width: 50px;
   padding: 0;
   border-radius: 50%;
-  background-color: var(--base-variant);
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -476,19 +476,19 @@ body.dark {
   background-color: #2d593f;
 }
 
-.darkmode h1{
- color: white;
+.darkmode h1 {
+  color: white;
 }
 
-.darkmode p{
+.darkmode p {
   color: #DCD7C9;
 }
 
-.darkmode legend{
+.darkmode legend {
   color: #DCD7C9;
 }
 
-.darkmode h2{
+.darkmode h2 {
   color: #fcfaf6
 }
 
@@ -497,7 +497,7 @@ body.dark {
 /* estlização pontos de coleta*/
 
 #btn-buscar {
-  background-color: #2e7d32;         
+  background-color: #2e7d32;
   color: white;
   border: none;
   padding: 12px 20px;
@@ -512,7 +512,7 @@ body.dark {
 }
 
 #btn-buscar:hover {
-  background-color: #346329;         
+  background-color: #346329;
   transform: translateY(-2px);
 }
 
@@ -539,14 +539,15 @@ body.dark {
   margin: 10px auto;
   padding: 10px;
   max-width: 500px;
-  background-color: #e8f5e9;  
+  background-color: #e8f5e9;
   border-left: 5px solid #2e7d32;
   border-radius: 6px;
   text-align: left;
 }
 
 .upload-box button {
-  background-color: #2e7d32; /* verde escuro normal */
+  background-color: #2e7d32;
+  /* verde escuro normal */
   color: white;
   padding: 12px 20px;
   border: none;
@@ -556,6 +557,7 @@ body.dark {
   width: 100%;
   transition: background-color 0.3s ease;
 }
+
 .upload-box label {
   font-weight: 600;
   color: #065f46;
@@ -592,6 +594,6 @@ body.dark {
 }
 
 .upload-box button:hover {
-  background-color: #346329; /* verde claro no hover */
+  background-color: #346329;
+  /* verde claro no hover */
 }
-
