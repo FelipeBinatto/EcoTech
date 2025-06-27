@@ -16,4 +16,8 @@ document.addEventListener('DOMContentLoaded', function () {
             this.reset();
         });
     }
+})
+document.getElementById('theme-switch').addEventListener('click', function (e) {
+  e.preventDefault(); // impede comportamento padrão
+  document.body.classList.toggle('darkmode');
 });

@@ -610,3 +610,23 @@ body.dark {
   background-color: #346329;
   /* verde claro no hover */
 }
+
+/*tema escuro API*/
+
+.darkmode #lista-pontos li {
+  background-color: #555353;
+  border-left: 5px solid #3e6d34;
+  color: #e0dfdf;
+}
+
+.darkmode #lista-pontos a {
+  color: #8decb4;
+}
+
+.darkmode #lista-pontos small.ewaste {
+  color: #76ff03;
+}
+
+.darkmode #lista-pontos small.geral {
+  color: #ffb300;
+}

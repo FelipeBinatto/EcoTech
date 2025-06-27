@@ -65,27 +65,28 @@
         const elementosGeral = dadosGeral.elements || [];
 
         const formatarPonto = (ponto, tipo) => {
-          const latP = ponto.lat || ponto.center?.lat;
-          const lonP = ponto.lon || ponto.center?.lon;
-          const nome = ponto.tags.name || 'Ponto de reciclagem';
-          const rua = ponto.tags['addr:street'] || '';
-          const numero = ponto.tags['addr:housenumber'] || '';
-          const endereco = rua + (numero ? ', ' + numero : '');
-          const link = `https://www.openstreetmap.org/?mlat=${latP}&mlon=${lonP}#map=18/${latP}/${lonP}`;
-          const dist = distancia(lat, lon, latP, lonP).toFixed(1);
+  const latP = ponto.lat || ponto.center?.lat;
+  const lonP = ponto.lon || ponto.center?.lon;
+  const nome = ponto.tags.name || 'Ponto de reciclagem';
+  const rua = ponto.tags['addr:street'] || '';
+  const numero = ponto.tags['addr:housenumber'] || '';
+  const endereco = rua + (numero ? ', ' + numero : '');
+  const link = `https://www.openstreetmap.org/?mlat=${latP}&mlon=${lonP}#map=18/${latP}/${lonP}`;
+  const dist = distancia(lat, lon, latP, lonP).toFixed(1);
 
-          const li = document.createElement('li');
-          li.innerHTML = `
-            <strong>${nome}</strong><br>
-            ${endereco || 'Endereço não informado'}<br>
-            Distância: ${dist} km<br>
-            <a href="${link}" target="_blank">Ver no mapa</a><br>
-            <small style="color:${tipo === 'ewaste' ? '#2e7d32' : '#e67e22'}">
-              ${tipo === 'ewaste' ? '✔ Aceita lixo eletrônico' : '⚠ Pode não aceitar lixo eletrônico'}
-            </small>
-          `;
-          return li;
-        };
+  const li = document.createElement('li');
+  li.classList.add('ponto');
+  li.innerHTML = `
+    <strong>${nome}</strong><br>
+    ${endereco || 'Endereço não informado'}<br>
+    Distância: ${dist} km<br>
+    <a href="${link}" target="_blank">Ver no mapa</a><br>
+    <small class="${tipo === 'ewaste' ? 'ewaste' : 'geral'}">
+      ${tipo === 'ewaste' ? '✔ Aceita lixo eletrônico' : '⚠ Pode não aceitar lixo eletrônico'}
+    </small>
+  `;
+  return li;
+};
 
         if (elementosEWaste.length > 0) {
           lista.innerHTML += '<li><strong>🔌 Pontos que aceitam lixo eletrônico</strong></li>';
