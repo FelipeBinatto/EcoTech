@@ -630,3 +630,14 @@ body.dark {
 .darkmode #lista-pontos small.geral {
   color: #ffb300;
 }
+
+/*icone spiner loading*/
+
+@keyframes girar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.img-loading {
+  animation: girar 1.5s linear infinite;
+}

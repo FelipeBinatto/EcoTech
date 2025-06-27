@@ -493,3 +493,13 @@ footer {
 .darkmode .card p {
     color: #f0eded;
 }
+
+#prev-button img,
+#next-button img {
+    filter: brightness(0) saturate(100%) invert(25%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(95%) contrast(90%);
+}
+
+.darkmode #prev-button img,
+.darkmode #next-button img {
+    filter: brightness(0) saturate(100%) invert(90%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(95%) contrast(90%);
+}
