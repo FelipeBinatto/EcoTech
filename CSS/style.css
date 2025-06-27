@@ -821,3 +821,12 @@ textarea:focus {
   }
 
 }
+
+#contacts_container h3,
+#contacts_container span {
+  text-align: left;
+}
+
+#contacts_container p {
+  text-align: left;
+}
