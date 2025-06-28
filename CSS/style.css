@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 .menu {
   position: fixed;
   top: 0;
@@ -23,7 +22,6 @@
   gap: 20px;
 }
 
-
 .menu ul {
   list-style: none;
   display: flex;
@@ -31,71 +29,60 @@
   padding: 15px 0;
 }
 
-
 .menu ul li {
   margin: 0 20px;
 }
 
-
 .menu ul li a {
   color: #ecf0f1;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.125rem;
   transition: color 0.3s, border-bottom 0.3s;
   padding-bottom: 4px;
 }
-
 
 .menu ul li a:hover {
   color: #1abc9c;
   border-bottom: 2px solid #1abc9c;
 }
 
-
 h1 {
   text-align: center;
   margin: 40px 0 10px;
-  font-size: 32px;
-  color: #1a1818;
+  font-size: calc(2rem * var(--font-scale));
   color: var(--text-color);
 }
 
 h2 {
   text-align: center;
   margin: 40px 0 10px;
-  font-size: 32px;
-  color: #1a1818;
+  font-size: calc(1.5rem * var(--font-scale));
   color: var(--text-color);
 }
 
 h3 {
   text-align: center;
   margin: 40px 0 10px;
-  font-size: 32px;
-  color: #1a1818;
+  font-size: calc(1.25rem * var(--font-scale));
   color: var(--text-color);
 }
 
-
 p {
   text-align: center;
-  font-size: 18px;
+  font-size: calc(1rem * var(--font-scale));
   max-width: 600px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-
 body {
-  font-family: "Segoe UI", sans-serif;
-  background-color: #F5EEDD;
-  color: #333;
-  line-height: 1.6;
-  padding-top: 80px;
+  font-family: "Segoe UI", "sans-serif";
+  font-size: calc(1rem * var(--font-scale));
   background-color: var(--base-color);
   color: var(--text-color);
+  line-height: 1.6;
+  padding-top: 80px;
 }
-
 
 footer {
   text-align: center;
@@ -106,7 +93,6 @@ footer {
   font-size: 1rem;
 }
 
-
 .img-banner {
   width: 1000px;
   height: 300px;
@@ -116,7 +102,6 @@ footer {
   display: block;
   margin-top: 5%;
 }
-
 
 .video-conteiner-item {
   display: flex;
@@ -142,7 +127,6 @@ footer {
   padding: 0 15px;
 }
 
-
 .equipe {
   display: flex;
   justify-content: space-around;
@@ -150,7 +134,6 @@ footer {
   gap: 20px;
   padding: 20px;
 }
-
 
 .membro {
   position: relative;
@@ -161,21 +144,18 @@ footer {
   height: 300px;
 }
 
-
 .membro img {
   width: 100%;
   height: 300px;
   display: block;
   position: relative;
-  overflow: hidden;
   object-fit: cover;
   border-radius: 20px;
 }
 
-
 .membro figcaption {
   border-radius: 20px;
-  font-size: 16px;
+  font-size: calc(1rem * var(--font-scale));
   position: absolute;
   top: 0;
   left: 0;
@@ -203,7 +183,6 @@ footer {
   justify-content: space-around;
 }
 
-
 #menu-toggle {
   display: none;
   font-size: 28px;
@@ -227,7 +206,6 @@ footer {
   transition: 0.3s;
 }
 
-
 .menu-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -235,15 +213,20 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  flex-wrap: nowrap;
 }
 
+.logo-and-font {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: nowrap;
+}
 
 .menu-logo img {
   height: 40px;
   display: block;
 }
-
 
 #menu-list {
   display: flex;
@@ -274,6 +257,7 @@ footer {
   --Importante: rgb(103, 170, 118);
   --cards: #FFFDF5;
   --terceira-cor: #000000;
+  --font-size: 18px;
 }
 
 .darkmode {
@@ -300,10 +284,11 @@ footer {
   position: fixed;
   top: 100px;
   right: 20px;
+  z-index: 500;
 }
 
 #theme-switch svg {
-  fill: var(--primary-color)
+  fill: var(--primary-color);
 }
 
 #theme-switch svg:last-child {
@@ -347,6 +332,7 @@ footer {
   height: 100%;
   align-items: center;
   transition: transform 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+  z-index: 200;
 }
 
 .card:hover {
@@ -356,13 +342,13 @@ footer {
 .card h3 {
   margin-top: 0;
   color: var(--text-color);
-  font-size: 1.3rem;
+  font-size: calc(1.3rem * var(--font-scale));
   margin-bottom: 0.5rem;
 }
 
 .card p {
   color: var(--secondary-text);
-  font-size: 1rem;
+  font-size: calc(1rem * var(--font-scale));
   line-height: 1.6;
 }
 
@@ -395,20 +381,20 @@ footer {
 }
 
 .page-title h2 {
-  font-size: 1rem;
+  font-size: calc(1.5rem * var(--font-scale));
   font-weight: 600;
   color: var(--text-color);
   margin-bottom: 8px;
 }
 
 .page-title h1 {
-  font-size: 3rem;
+  font-size: calc(2rem * var(--font-scale));
   font-weight: 600;
   color: var(--text-color);
 }
 
 .page-title p {
-  font-size: 1rem;
+  font-size: calc(1rem * var(--font-scale));
   font-weight: 400;
   margin-top: 16px;
   max-width: 65%;
@@ -434,13 +420,13 @@ footer {
 }
 
 #contacts_container h3 {
-  font-size: 2rem;
+  font-size: calc(1rem * var(--font-scale));
   font-weight: 500;
   margin-bottom: 8px;
 }
 
 #contacts_container p {
-  font-size: 1rem;
+  font-size: calc(1rem * var(--font-scale));
   font-weight: 400;
   color: var(--text-color);
   width: 90%;
@@ -481,7 +467,7 @@ footer {
 }
 
 .card-infos span {
-  font-size: 0.95rem;
+  font-size: calc(1rem * var(--font-scale));
   text-align: center;
 }
 
@@ -491,7 +477,7 @@ footer {
 }
 
 #contacts_container h4 {
-  font-size: 1.2rem;
+  font-size: calc(1rem * var(--font-scale));
   font-weight: 500;
   color: var(--secondary-text);
   margin: 24px 0 8px;
@@ -520,7 +506,7 @@ footer {
 }
 
 #social_media_icons .icon-link {
-  font-size: 24px;
+  font-size: calc(1rem * var(--font-scale));
   color: var(--primary-color);
   transition: color 0.3s;
 }
@@ -567,7 +553,7 @@ footer {
   padding: 10px;
   border-radius: 6px;
   border: 1px solid var(--input-border);
-  font-size: 1rem;
+  font-size: calc(1rem * var(--font-scale));
   resize: vertical;
 }
 
@@ -578,7 +564,7 @@ button[type="submit"] {
   border: none;
   border-radius: 6px;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: calc(1rem * var(--font-scale));
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
@@ -593,7 +579,7 @@ select,
 textarea {
   width: 100%;
   padding: 0.8rem;
-  font-size: 1rem;
+  font-size: calc(1rem * var(--font-scale));
   color: #000;
   background-color: white;
   border: 2px solid #ccc;
@@ -715,7 +701,7 @@ textarea:focus {
   }
 
   #menu-list li a {
-    font-size: 16px;
+    font-size: 1rem;
     display: block;
     width: 100%;
   }
@@ -736,12 +722,6 @@ textarea:focus {
   .img-banner {
     width: 90%;
     height: auto;
-  }
-
-  h1,
-  h2 {
-    font-size: 24px;
-    margin: 30px 0 10px;
   }
 
   .video-conteiner {
@@ -767,7 +747,7 @@ textarea:focus {
   }
 
   p {
-    font-size: 16px;
+    font-size: 16 1rem;
     padding: 0 10px;
   }
 
@@ -820,6 +800,22 @@ textarea:focus {
     text-align: center;
   }
 
+  .logo-and-font {
+    gap: 8px;
+  }
+
+  .font-buttons button {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #333;
+    background-color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+
 }
 
 #contacts_container h3,
@@ -829,4 +825,93 @@ textarea:focus {
 
 #contacts_container p {
   text-align: left;
+}
+
+
+
+.logo-font-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+.font-buttons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+#increase-font,
+#decrease-font {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+  margin-left: 0;
+}
+
+#increase-font:hover,
+#decrease-font:hover {
+  background-color: var(--accent-color);
+}
+
+#increase-font,
+#decrease-font {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+}
+
+#increase-font:hover,
+#decrease-font:hover {
+  background-color: #f0f0f0;
+  color: black;
+  border-color: black;
+}
+
+#font-buttons {
+  position: fixed;
+  top: 100px;
+  left: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  z-index: 900;
+}
+
+html {
+  font-size: 18px;
+  --font-scale: 1;
+}
+
+span,
+label,
+a,
+li,
+input,
+textarea,
+button,
+.card,
+.card-infos,
+.contact-card,
+#contacts_container h3,
+#contacts_container p,
+#contacts_container span,
+#contact_form_container h3,
+.menu ul li a {
+  font-size: calc(1rem * var(--font-scale));
+}
+
+#increase-font,
+#decrease-font {
+  font-size: 1rem;
 }

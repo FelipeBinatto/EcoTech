@@ -11,12 +11,21 @@
 
 <body>
 
-  <!-- Aqui é o menu-->
+  <!-- Botões de fonte-->
+  <div id="font-buttons">
+    <button id="decrease-font">A-</button>
+    <button id="increase-font">A+</button>
+  </div>
 
+  <!-- Navegação -->
   <nav class="menu">
     <div class="menu-container">
-      <div class="logo"><img src="assets/IMG/logo completa.png" alt="Logo"></div>
+      <div class="logo">
+        <img src="assets/IMG/logo completa.png" alt="Logo">
+      </div>
+
       <div class="menu-toggle" id="menu-toggle">☰</div>
+
       <ul id="menu-list">
         <li><a href="index.html">EcoTech</a></li>
         <li><a href="sobre.html">Sobre nós</a></li>
@@ -27,7 +36,7 @@
     </div>
   </nav>
 
-  <!-- Botão de tema fora da lista -->
+  <!-- Botão de modo escuro -->
   <button id="theme-switch">
     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
       <path
@@ -66,18 +75,18 @@
     <div class="card">
       <h3>Nosso compromisso</h3>
       <p>Nosso compromisso vai além da gestão de resíduos: buscamos também informar e educar
-    a população sobre
-    a importância da reciclagem eletrônica, incentivando práticas mais responsáveis e
-    conscientes. A EcoTech representa, assim, um passo em direção a um futuro mais limpo, tecnológico e
-    ecologicamente equilibrado.</p>
+        a população sobre
+        a importância da reciclagem eletrônica, incentivando práticas mais responsáveis e
+        conscientes. A EcoTech representa, assim, um passo em direção a um futuro mais limpo, tecnológico e
+        ecologicamente equilibrado.</p>
     </div>
 
-<div class="card">
+    <div class="card">
       <h3>Tecnologia e sustentabilidade</h3>
       <p> Acreditamos que a tecnologia pode e deve ser aliada da sustentabilidade,
-    e é com base nessa convicção
-    que desenvolvemos iniciativas focadas na coleta, triagem, reaproveitamento e descarte
-    correto de materiais eletrônicos.</p>
+        e é com base nessa convicção
+        que desenvolvemos iniciativas focadas na coleta, triagem, reaproveitamento e descarte
+        correto de materiais eletrônicos.</p>
     </div>
   </div>
 
@@ -116,5 +125,6 @@
 </body>
 <script src="JS/menu.js"></script>
 <script src="JS/theme.js"></script>
+<script src="JS/font.js"></script>
 
 </html>
