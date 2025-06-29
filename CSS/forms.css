@@ -679,28 +679,6 @@ p {
     margin: 30px 0 10px;
   }
 
-  .video-conteiner {
-    flex-direction: row;
-    gap: 15px;
-  }
-
-  .equipe {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .membro {
-    width: 30%;
-    height: auto;
-    border-radius: 20px;
-    overflow: hidden;
-  }
-
-  .membro img {
-    height: auto;
-    border-radius: 20px;
-  }
-
   p {
     font-size: 1rem;
     padding: calc(1rem * var(--font-scale));
@@ -1004,14 +982,36 @@ html[data-theme='contrast'] .icon-contrast {
   border: 2px solid #37ff00 !important;
 }
 
-.icon-dark {
-  order: 1;
+#contrast-popup {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #222;
+  color: #00ffdd;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  z-index: 9999;
+  display: none;
+  animation: fadeInOut 4s ease-in-out;
 }
 
-.icon-contrast {
-  order: 2;
-}
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
 
-.icon-light {
-  order: 3;
+  10%,
+  90% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
 }

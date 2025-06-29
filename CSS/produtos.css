@@ -550,14 +550,14 @@ button,
 /*modo auto contraste*/
 
 .high-contrast {
-  --base-color: #000 !important;
-  --base-variant: #000 !important;
-  --text-color: #ffff00 !important;
-  --secondary-text: #00ff00 !important;
-  --primary-color: #000 !important;
-  --accent-color: #ff0 !important;
-  --cards: #000 !important;
-  --terceira-cor: #00ff00 !important;
+    --base-color: #000 !important;
+    --base-variant: #000 !important;
+    --text-color: #ffff00 !important;
+    --secondary-text: #00ff00 !important;
+    --primary-color: #000 !important;
+    --accent-color: #ff0 !important;
+    --cards: #000 !important;
+    --terceira-cor: #00ff00 !important;
 }
 
 .high-contrast body,
@@ -569,106 +569,140 @@ button,
 .high-contrast li,
 .high-contrast label,
 .high-contrast span {
-  background-color: #000 !important;
-  color: #ffff00 !important;
+    background-color: #000 !important;
+    color: #ffff00 !important;
 }
 
 .high-contrast .menu,
 .high-contrast footer {
-  background-color: #000 !important;
-  color: #ffff00 !important;
-  border: none !important;
-  box-shadow: none !important;
+    background-color: #000 !important;
+    color: #ffff00 !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 .high-contrast .menu ul li a {
-  color: #ffff00 !important;
-  border: none;
+    color: #ffff00 !important;
+    border: none;
 }
 
 .high-contrast .menu ul li a:hover {
-  color: #00ffff !important;
-  border-bottom: 2px solid #00ffff !important;
+    color: #00ffff !important;
+    border-bottom: 2px solid #00ffff !important;
 }
 
 .high-contrast .card {
-  background-color: #000 !important;
-  color: #ffff00 !important;
-  border: 2px solid #00ff00 !important;
-  border-radius: 12px;
+    background-color: #000 !important;
+    color: #ffff00 !important;
+    border: 2px solid #00ff00 !important;
+    border-radius: 12px;
 }
 
 .high-contrast .card h3,
 .high-contrast .card p {
-  color: #ffff00 !important;
+    color: #ffff00 !important;
 }
 
 .high-contrast button,
 .high-contrast #increase-font,
 .high-contrast #decrease-font {
-  background-color: #000 !important;
-  color: #00ff00 !important;
-  border: 2px solid #00ff00 !important;
-  border-radius: 50% !important;
-  font-weight: bold;
+    background-color: #000 !important;
+    color: #00ff00 !important;
+    border: 2px solid #00ff00 !important;
+    border-radius: 50% !important;
+    font-weight: bold;
 }
 
 .high-contrast button:hover,
 .high-contrast #increase-font:hover,
 .high-contrast #decrease-font:hover {
-  background-color: #111 !important;
-  color: #ff0 !important;
-  border-color: #ff0 !important;
+    background-color: #111 !important;
+    color: #ff0 !important;
+    border-color: #ff0 !important;
 }
 
 .high-contrast #theme-switch {
-  background-color: #000 !important;
-  border: 2px solid #00ff00 !important;
-  border-radius: 50% !important;
+    background-color: #000 !important;
+    border: 2px solid #00ff00 !important;
+    border-radius: 50% !important;
 }
 
 .high-contrast #theme-switch svg {
-  fill: #00ff00 !important;
+    fill: #00ff00 !important;
 }
 
 .high-contrast #prev-button img,
 .high-contrast #next-button img {
-  filter: invert(100%) !important;
+    filter: invert(100%) !important;
 }
 
 .high-contrast #menu-list.show {
-  background-color: #000 !important;
+    background-color: #000 !important;
 }
 
 .high-contrast #prev-button,
 .high-contrast #next-button {
-  background-color: transparent !important;
-  border: none !important;
-  width: auto !important;
-  height: auto !important;
-  padding: 0 !important;
-  margin: 0 !important;
+    background-color: transparent !important;
+    border: none !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 .high-contrast #prev-button img,
 .high-contrast #next-button img {
-  filter: invert(100%) !important;
-  width: 30px;
-  height: 30px;
+    filter: invert(100%) !important;
+    width: 30px;
+    height: 30px;
 }
 
 .menu {
-  border-bottom: 2px solid var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
 }
 
 footer {
-  border-top: 2px solid var(--accent-color);
+    border-top: 2px solid var(--accent-color);
 }
 
 .high-contrast .menu {
-  border-bottom: 2px solid #37ff00 !important;
+    border-bottom: 2px solid #37ff00 !important;
 }
 
 .high-contrast footer {
-  border-top: 2px solid #37ff00 !important;
+    border-top: 2px solid #37ff00 !important;
+}
+
+#contrast-popup {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #222;
+    color: #00ffdd;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    z-index: 9999;
+    display: none;
+    animation: fadeInOut 4s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+
+    10%,
+    90% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
 }

@@ -57,6 +57,55 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.setItem('themeMode', mode);
         themeMode = mode;
         showIconForNextTheme(mode);
+        // --- POP-UP DE MODO CONTRASTE ---
+        let popup = document.getElementById('contrast-popup');
+
+        if (!popup) {
+            popup = document.createElement('div');
+            popup.id = 'contrast-popup';
+            popup.setAttribute('role', 'alert');
+            popup.setAttribute('aria-live', 'assertive');
+            popup.textContent = 'Modo de alto contraste ativado. Este modo foi desenvolvido para pessoas com deficiência visual.';
+            popup.style.position = 'fixed';
+            popup.style.bottom = '20px';
+            popup.style.left = '50%';
+            popup.style.transform = 'translateX(-50%)';
+            popup.style.backgroundColor = '#222';
+            popup.style.color = '#00ffdd';
+            popup.style.padding = '1rem 1.5rem';
+            popup.style.borderRadius = '8px';
+            popup.style.boxShadow = '0 0 10px rgba(0,0,0,0.2)';
+            popup.style.fontSize = '1rem';
+            popup.style.zIndex = '9999';
+            popup.style.display = 'none';
+            popup.style.animation = 'fadeInOut 4s ease-in-out';
+            document.body.appendChild(popup);
+        }
+
+        if (popup.hideTimeout) {
+            clearTimeout(popup.hideTimeout);
+            popup.hideTimeout = null;
+        }
+
+        if (mode === 'contrast') {
+            if (!sessionStorage.getItem('contrastPopupShown')) {
+                popup.style.display = 'block';
+                popup.classList.remove('popup');
+                void popup.offsetWidth; // força reflow para animação
+                popup.classList.add('popup');
+
+                sessionStorage.setItem('contrastPopupShown', 'true');
+
+                popup.hideTimeout = setTimeout(() => {
+                    popup.style.display = 'none';
+                    popup.hideTimeout = null;
+                }, 4000);
+            }
+        } else {
+            popup.style.display = 'none';
+        }
+        // --- FIM DO POP-UP ---
+
     }
 
     function cycleTheme() {
