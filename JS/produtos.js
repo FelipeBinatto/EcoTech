@@ -36,35 +36,57 @@ bntNext.addEventListener('click', nextSlider);
 bntPrev.addEventListener('click', prevSlider);
 
 const themeSwitch = document.getElementById('theme-switch');
-let darkmode = localStorage.getItem('darkmode');
 
-const enableDarkmode = () => {
+let themeMode = localStorage.getItem('themeMode') || 'light';
+
+const updateIcon = () => {
+  const icons = {
+    light: document.querySelector('.icon-moon'),      
+    dark: document.querySelector('.icon-sun'),    
+    contrast: document.querySelector('.icon-contrast')      
+  };
+
+  Object.values(icons).forEach(icon => {
+    if (icon) icon.style.display = 'none';
+  });
+
+  if (icons[themeMode]) {
+    icons[themeMode].style.display = 'inline';
+  }
+};
+
+const applyTheme = (mode) => {
+  document.body.classList.remove('darkmode', 'high-contrast');
+  document.documentElement.classList.remove('darkmode', 'high-contrast');
+  document.documentElement.removeAttribute('data-theme');
+
+  if (mode === 'dark') {
     document.body.classList.add('darkmode');
-    localStorage.setItem('darkmode', 'active');
+    document.documentElement.classList.add('darkmode');
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else if (mode === 'contrast') {
+    document.body.classList.add('high-contrast');
+    document.documentElement.classList.add('high-contrast');
+    document.documentElement.setAttribute('data-theme', 'contrast');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+
+  localStorage.setItem('themeMode', mode);
+  updateIcon();
 };
 
-const disableDarkmode = () => {
-    document.body.classList.remove('darkmode');
-    localStorage.setItem('darkmode', 'inactive');
+const cycleTheme = () => {
+  themeMode = themeMode === 'light' ? 'dark'
+            : themeMode === 'dark' ? 'contrast'
+            : 'light';
+  applyTheme(themeMode);
 };
 
-// Aplica o modo salvo ao carregar
-if (darkmode === 'active') {
-    enableDarkmode();
-} else {
-    disableDarkmode();
-}
+applyTheme(themeMode);
 
-// Alterna tema ao clicar no botão
 if (themeSwitch) {
-    themeSwitch.addEventListener('click', () => {
-        darkmode = localStorage.getItem('darkmode');
-        if (darkmode !== 'active') {
-            enableDarkmode();
-        } else {
-            disableDarkmode();
-        }
-    });
+  themeSwitch.addEventListener('click', cycleTheme);
 }
 
 document.addEventListener("DOMContentLoaded", () => {

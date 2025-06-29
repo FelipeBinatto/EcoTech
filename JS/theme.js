@@ -1,32 +1,69 @@
-const themeSwitch = document.getElementById('theme-switch');
-let darkmode = localStorage.getItem('darkmode');
+document.addEventListener('DOMContentLoaded', function() {
+  
+  const themeSwitch = document.getElementById('theme-switch');
+  
+ 
+  const nextIcons = {
+    light: document.querySelector('.icon-moon'),
+    dark: document.querySelector('.icon-sun'),
+    contrast: document.querySelector('.icon-contrast')
+  };
 
-const enableDarkmode = () => {
-  document.body.classList.add('darkmode');
-  localStorage.setItem('darkmode', 'active');
-};
+  
+  let themeMode = localStorage.getItem('themeMode') || 'light';
 
-const disableDarkmode = () => {
-  document.body.classList.remove('darkmode');
-  localStorage.setItem('darkmode', 'inactive');
-};
+  
+  function hideAllIcons() {
+    Object.values(nextIcons).forEach(icon => {
+      if (icon) icon.style.display = 'none';
+    });
+  }
 
-// Aplica o modo salvo ao carregar
-if (darkmode === 'active') {
-  enableDarkmode();
-} else {
-  disableDarkmode();
-}
+  function showIconForNextTheme(currentTheme) {
+    hideAllIcons();
+    const icon = nextIcons[currentTheme];
+    if (icon) icon.style.display = 'inline';
+  }
 
-// Alterna tema ao clicar no botão
-if (themeSwitch) {
-  themeSwitch.addEventListener('click', () => {
-    darkmode = localStorage.getItem('darkmode');
-    if (darkmode !== 'active') {
-      enableDarkmode();
-    } else {
-      disableDarkmode();
+
+  function applyTheme(mode) {
+    
+    document.documentElement.classList.remove('darkmode', 'high-contrast');
+    document.documentElement.removeAttribute('data-theme');
+
+   
+    switch(mode) {
+      case 'dark':
+        document.documentElement.classList.add('darkmode');
+        document.documentElement.setAttribute('data-theme', 'dark');
+        break;
+      case 'contrast':
+        document.documentElement.classList.add('high-contrast');
+        document.documentElement.setAttribute('data-theme', 'contrast');
+        break;
+      default: 
+        document.documentElement.setAttribute('data-theme', 'light');
     }
-  });
-}
 
+    
+    localStorage.setItem('themeMode', mode);
+    themeMode = mode;
+    showIconForNextTheme(mode);
+  }
+
+ 
+  function cycleTheme() {
+    const themes = ['light', 'dark', 'contrast'];
+    const currentIndex = themes.indexOf(themeMode);
+    const nextIndex = (currentIndex + 1) % themes.length;
+    applyTheme(themes[nextIndex]);
+  }
+
+  
+  applyTheme(themeMode);
+
+  
+  if (themeSwitch) {
+    themeSwitch.addEventListener('click', cycleTheme);
+  }
+});

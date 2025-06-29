@@ -42,8 +42,8 @@
 }
 
 .menu ul li a:hover {
-    color: #1abc9c;
-    border-bottom: 2px solid #1abc9c;
+    color: auto;
+    border-bottom: 2px solid auto;
 }
 
 h1 {
@@ -163,7 +163,6 @@ footer {
     --text-color: black;
     --secondary-text: #333;
     --primary-color: #468236;
-    --accent-color: #1abc9c;
     --Importante: rgb(103, 170, 118);
     --cards: #FFFDF5;
     --terceira-cor: #000000;
@@ -177,7 +176,6 @@ footer {
     --text-color: rgb(255, 255, 255);
     --secondary-text: #f0eded;
     --primary-color: #468236;
-    --accent-color: #1abc9c;
     --Importante: rgb(8, 110, 30);
     --cards: rgb(102, 136, 111);
     --terceira-cor: #000000;
@@ -419,7 +417,7 @@ html {
 
 
     #menu-toggle:hover {
-        color: #1abc9c;
+        color: auto;
     }
 
 
@@ -547,4 +545,130 @@ button,
 #increase-font,
 #decrease-font {
     font-size: 1rem;
+}
+
+/*modo auto contraste*/
+
+.high-contrast {
+  --base-color: #000 !important;
+  --base-variant: #000 !important;
+  --text-color: #ffff00 !important;
+  --secondary-text: #00ff00 !important;
+  --primary-color: #000 !important;
+  --accent-color: #ff0 !important;
+  --cards: #000 !important;
+  --terceira-cor: #00ff00 !important;
+}
+
+.high-contrast body,
+.high-contrast h1,
+.high-contrast h2,
+.high-contrast h3,
+.high-contrast p,
+.high-contrast a,
+.high-contrast li,
+.high-contrast label,
+.high-contrast span {
+  background-color: #000 !important;
+  color: #ffff00 !important;
+}
+
+.high-contrast .menu,
+.high-contrast footer {
+  background-color: #000 !important;
+  color: #ffff00 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.high-contrast .menu ul li a {
+  color: #ffff00 !important;
+  border: none;
+}
+
+.high-contrast .menu ul li a:hover {
+  color: #00ffff !important;
+  border-bottom: 2px solid #00ffff !important;
+}
+
+.high-contrast .card {
+  background-color: #000 !important;
+  color: #ffff00 !important;
+  border: 2px solid #00ff00 !important;
+  border-radius: 12px;
+}
+
+.high-contrast .card h3,
+.high-contrast .card p {
+  color: #ffff00 !important;
+}
+
+.high-contrast button,
+.high-contrast #increase-font,
+.high-contrast #decrease-font {
+  background-color: #000 !important;
+  color: #00ff00 !important;
+  border: 2px solid #00ff00 !important;
+  border-radius: 50% !important;
+  font-weight: bold;
+}
+
+.high-contrast button:hover,
+.high-contrast #increase-font:hover,
+.high-contrast #decrease-font:hover {
+  background-color: #111 !important;
+  color: #ff0 !important;
+  border-color: #ff0 !important;
+}
+
+.high-contrast #theme-switch {
+  background-color: #000 !important;
+  border: 2px solid #00ff00 !important;
+  border-radius: 50% !important;
+}
+
+.high-contrast #theme-switch svg {
+  fill: #00ff00 !important;
+}
+
+.high-contrast #prev-button img,
+.high-contrast #next-button img {
+  filter: invert(100%) !important;
+}
+
+.high-contrast #menu-list.show {
+  background-color: #000 !important;
+}
+
+.high-contrast #prev-button,
+.high-contrast #next-button {
+  background-color: transparent !important;
+  border: none !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.high-contrast #prev-button img,
+.high-contrast #next-button img {
+  filter: invert(100%) !important;
+  width: 30px;
+  height: 30px;
+}
+
+.menu {
+  border-bottom: 2px solid var(--accent-color);
+}
+
+footer {
+  border-top: 2px solid var(--accent-color);
+}
+
+.high-contrast .menu {
+  border-bottom: 2px solid #37ff00 !important;
+}
+
+.high-contrast footer {
+  border-top: 2px solid #37ff00 !important;
 }

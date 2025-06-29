@@ -313,7 +313,9 @@ body.dark {
 }
 
 #theme-switch svg {
-  fill: var(--primary-color)
+  display: none;
+  width: 24px;
+  height: 24px;
 }
 
 #theme-switch svg:last-child {
@@ -757,4 +759,259 @@ body {
 * {
   box-sizing: border-box;
   word-break: break-word;
+}
+
+/* ==== TEMA ALTO CONTRASTE ==== */
+.high-contrast {
+  --base-color: #000;
+  --base-variant: #000;
+  --text-color: #fff;
+  --secondary-text: #ff0;
+  --primary-color: #fff;
+  --accent-color: #f00;
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.high-contrast body,
+.high-contrast p,
+.high-contrast label,
+.high-contrast h1,
+.high-contrast h2,
+.high-contrast legend,
+.high-contrast li,
+.high-contrast a {
+  color: #eeff00 !important;
+  background-color: #000 !important;
+}
+
+.high-contrast input,
+.high-contrast select,
+.high-contrast textarea {
+  background-color: #000 !important;
+  color: #37ff00 !important;
+  border: 2px solid #37ff00 !important;
+}
+
+.high-contrast .menu,
+.high-contrast .upload-box button,
+.high-contrast #btn-buscar {
+  background-color: #000000 !important;
+  color: #fffb00 !important;
+  border: 2px solid #37ff00 !important;
+}
+
+.high-contrast .upload-box input[type="file"] {
+  background-color: #000 !important;
+  color: #ffffff !important;
+  border: 2px dashed #37ff00 !important;
+}
+
+.high-contrast input[type="file"]::-webkit-file-upload-button {
+  color: #fff;
+  background: #2ed600;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.high-contrast #theme-switch svg {
+  fill: #37ff00;
+}
+
+#contrast-toggle {
+  position: fixed;
+  top: 170px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  background-color: #37ff00;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#contrast-toggle svg {
+  width: 24px;
+  height: 24px;
+  fill: #000;
+}
+
+#contrast-toggle .contrast-on {
+  display: none;
+}
+
+body.high-contrast #contrast-toggle .contrast-off {
+  display: none;
+}
+
+body.high-contrast #contrast-toggle .contrast-on {
+  display: block;
+}
+
+.theme-contrast .theme-button {
+  color: black;
+}
+
+.menu svg,
+.menu i {
+  color: #e5ff00;
+  fill: currentColor;
+}
+
+.darkmode .menu svg,
+.darkmode .menu i {
+  color: #e5ff00;
+  fill: currentColor;
+}
+
+/*cor dos icones */
+#theme-switch svg {
+  fill: #468236;
+  /
+}
+
+.darkmode #theme-switch svg {
+  fill: #468236;
+
+}
+
+.high-contrast #theme-switch svg {
+  fill: #468236;
+
+}
+
+.high-contrast.darkmode {
+  --base-color: #000 !important;
+  --base-variant: #000 !important;
+  --text-color: #fff !important;
+  --primary-color: #fff !important;
+  --accent-color: #f00 !important;
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.high-contrast.darkmode *,
+.high-contrast.darkmode body {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+#theme-switch {
+  color: #37ff00;
+}
+
+.darkmode #theme-switch {
+  color: #37ff00;
+}
+
+.high-contrast #theme-switch {
+  color: #37ff00;
+}
+
+.icon-light,
+.icon-dark,
+.icon-contrast {
+  display: none;
+}
+
+html[data-theme='light'] .icon-light {
+  display: inline;
+}
+
+html[data-theme='dark'] .icon-dark {
+  display: inline;
+}
+
+html[data-theme='contrast'] .icon-contrast {
+  display: inline;
+}
+
+#theme-switch svg {
+  display: none;
+  width: 24px;
+  height: 24px;
+}
+
+#theme-switch svg.inline {
+  display: inline;
+}
+
+/* Alto contraste da API */
+.high-contrast #lista-pontos li {
+  background-color: #000 !important;
+  border-left: 5px solid #37ff00 !important;
+  color: #eeff00 !important;
+}
+
+.high-contrast #lista-pontos a {
+  color: #00f6ff !important;
+  text-decoration: underline;
+}
+
+.high-contrast #lista-pontos small.ewaste {
+  color: #37ff00 !important;
+}
+
+.high-contrast #lista-pontos small.geral {
+  color: #ffff00 !important;
+}
+
+.high-contrast #theme-switch,
+.high-contrast #increase-font,
+.high-contrast #decrease-font {
+  background-color: #000 !important;
+  color: #37ff00 !important;
+  fill: #37ff00 !important;
+  border: 2px solid #37ff00 !important;
+  border-radius: 50% !important;
+  box-shadow: none !important;
+}
+
+.high-contrast #theme-switch svg {
+  fill: #37ff00 !important;
+}
+
+.high-contrast .menu ul li a:hover {
+  color: #00ffff !important;
+  border-bottom: 2px solid #00ffff !important;
+}
+
+.high-contrast #menu-list.show {
+  background-color: #000 !important;
+}
+
+.high-contrast button:hover,
+.high-contrast #increase-font:hover,
+.high-contrast #decrease-font:hover {
+  background-color: #111 !important;
+  color: #ff0 !important;
+  border-color: #ff0 !important;
+}
+
+.high-contrast footer {
+  border-top: 2px solid #37ff00 !important;
+}
+
+.high-contrast form {
+  background-color: #000 !important;
+  border: 2px solid #37ff00 !important;
+}
+
+.icon-dark {
+  order: 1;
+}
+
+.icon-contrast {
+  order: 2;
+}
+
+.icon-light {
+  order: 3;
 }

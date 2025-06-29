@@ -634,7 +634,7 @@ textarea:focus {
     font-size: 28px;
     cursor: pointer;
     user-select: none;
-    color: #ecf0f1;
+    color: #468236;
     background: none;
     border: none;
     padding: 0;
@@ -914,4 +914,140 @@ button,
 #increase-font,
 #decrease-font {
   font-size: 1rem;
+}
+/* MODO ALTO CONTRASTE */
+.high-contrast {
+  --base-color: #000 !important;
+  --base-variant: #000 !important;
+  --text-color: #ffffff !important;
+  --secondary-text: #ffff00 !important;
+  --primary-color: #000 !important;
+  --accent-color: #ff0 !important;
+  --cards: #000 !important;
+  --terceira-cor: #fff !important;
+}
+
+.high-contrast body,
+.high-contrast h1,
+.high-contrast h2,
+.high-contrast h3,
+.high-contrast p,
+.high-contrast a,
+.high-contrast label,
+.high-contrast li,
+.high-contrast span {
+  color: #ffff00 !important;
+  background-color: #000 !important;
+}
+
+.high-contrast #main_container,
+.high-contrast #contact_form_container,
+.high-contrast #contacts_container,
+.high-contrast footer {
+  background-color: #000 !important;
+  color: #ffff00 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.high-contrast .menu {
+  background-color: #000 !important;
+  border: 2px solid #37ff00 !important;
+}
+
+.high-contrast .menu ul li a {
+  color: #ffff00 !important;
+  border: none !important;
+}
+
+.high-contrast .menu ul li a:hover {
+  color: #00ffff !important;
+  border-bottom: 2px solid #00ffff !important;
+}
+
+.high-contrast input,
+.high-contrast select,
+.high-contrast textarea {
+  background-color: #000 !important;
+  color: #00ff00 !important;
+  border: 2px solid #00ff00 !important;
+  border-radius: 6px !important;
+}
+
+.high-contrast input:focus,
+.high-contrast select:focus,
+.high-contrast textarea:focus {
+  background-color: #111 !important;
+  border-color: #ff0 !important;
+  color: #0f0 !important;
+}
+
+.high-contrast button,
+.high-contrast button[type="submit"] {
+  background-color: #000 !important;
+  color: #ffff00 !important;
+  border: 2px solid #ffff00 !important;
+  border-radius: 6px !important;
+}
+
+.high-contrast button:hover,
+.high-contrast #increase-font:hover,
+.high-contrast #decrease-font:hover {
+  background-color: #222 !important;
+  color: #fff !important;
+}
+
+.high-contrast .card,
+.high-contrast .contact-card {
+  background-color: #000 !important;
+  color: #ffff00 !important;
+  border: 2px solid #37ff00 !important;
+  border-radius: 12px !important;
+}
+
+.high-contrast #social_media_icons .icon-link {
+  color: #00ffff !important;
+}
+
+.high-contrast #social_media_icons .icon-link:hover {
+  color: #ff0 !important;
+}
+
+.high-contrast #theme-switch,
+.high-contrast #increase-font,
+.high-contrast #decrease-font {
+  background-color: #000 !important;
+  color: #37ff00 !important;
+  fill: #37ff00 !important;
+  border: 2px solid #37ff00 !important;
+  border-radius: 50% !important;
+  box-shadow: none !important;
+}
+
+.high-contrast #theme-switch svg {
+  fill: #37ff00 !important;
+}
+
+.high-contrast #menu-list.show {
+  background-color: #000 !important;
+}
+
+.high-contrast footer {
+  border-top: 2px solid #37ff00 !important;
+}
+
+#theme-switch svg {
+  display: none;
+}
+
+html[data-theme="light"] #theme-switch svg:nth-child(3) {
+  display: block;
+}
+
+html[data-theme="dark"] #theme-switch svg:nth-child(1) {
+  display: block;
+}
+
+html[data-theme="contrast"] #theme-switch svg:nth-child(2) {
+  display: block;
 }
