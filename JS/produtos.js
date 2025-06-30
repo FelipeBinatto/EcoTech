@@ -125,7 +125,6 @@ const applyTheme = (mode) => {
   } else {
     popup.style.display = 'none';
   }
-  // --- FIM DO CÓDIGO DO POP-UP ---
 
   updateIcon();
 };

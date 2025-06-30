@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #468236;
+  color: white;
+  width: 100%;
+  font-size: calc(1rem * var(--font-scale));
+}
+
+
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: var(--base-variant);
@@ -382,8 +392,6 @@ body.dark {
   background-color: #1b5e20;
 }
 
-
-
 #pontos-coleta-container {
   text-align: center;
   margin-top: 30px;
@@ -457,8 +465,6 @@ body.dark {
   background-color: #346329;
 }
 
-/*tema escuro API*/
-
 .darkmode #lista-pontos li {
   background-color: #555353;
   border-left: 5px solid #3e6d34;
@@ -476,8 +482,6 @@ body.dark {
 .darkmode #lista-pontos small.geral {
   color: #ffb300;
 }
-
-/*icone spiner loading*/
 
 @keyframes girar {
   from {
@@ -584,14 +588,17 @@ textarea {
   max-width: 100%;
   box-sizing: border-box;
   resize: vertical;
-  overflow-wrap: break-word;
+  overflow-wrap: break-word 0;
   word-break: break-word;
 }
 
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+height: 100%;
+margin: 0;
+padding: 0;
+display: flex;
+flex-direction: column;
 }
 
 * {
@@ -599,7 +606,6 @@ body {
   word-break: break-word;
 }
 
-/* ==== TEMA ALTO CONTRASTE ==== */
 .high-contrast {
   --base-color: #000;
   --base-variant: #000;
@@ -633,7 +639,7 @@ body {
 
 .high-contrast .menu,
 .high-contrast .upload-box button,
-.high-contrast #btn-buscar, 
+.high-contrast #btn-buscar,
 .high-contrast button[type="submit"] {
   background-color: #000000 !important;
   color: #fffb00 !important;
@@ -710,7 +716,6 @@ body.high-contrast #contrast-toggle .contrast-on {
   fill: currentColor;
 }
 
-/*cor dos icones */
 #theme-switch svg {
   fill: #468236;
   /
@@ -782,7 +787,6 @@ html[data-theme='contrast'] .icon-contrast {
   display: inline;
 }
 
-/* Alto contraste da API */
 .high-contrast #lista-pontos li {
   background-color: #000 !important;
   border-left: 5px solid #37ff00 !important;
@@ -1015,7 +1019,7 @@ html[data-theme='contrast'] .icon-contrast {
     overflow-wrap: break-word;
   }
 
-   .form-grid {
+  .form-grid {
     grid-template-columns: 1fr !important;
     padding: 1rem;
   }
@@ -1032,7 +1036,6 @@ html[data-theme='contrast'] .icon-contrast {
 
 }
 
-/* Grid de duas colunas no formulário */
 form {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1040,7 +1043,6 @@ form {
   padding: 2rem;
 }
 
-/* Cada item ocupa 1 coluna */
 form label,
 form input,
 form select,
@@ -1049,7 +1051,6 @@ form .upload-box {
   grid-column: span 1;
 }
 
-/* Elementos que devem ocupar 100% da largura */
 form h1,
 form p,
 form hr,
@@ -1057,7 +1058,6 @@ form legend {
   grid-column: 1 / -1;
 }
 
-/* Botões lado a lado */
 .form-buttons {
   grid-column: 1 / -1;
   display: flex;
@@ -1096,10 +1096,6 @@ form legend {
   align-items: center;
 }
 
-
-
-
-/* Lista da API abaixo dos botões */
 #pontos-coleta-container {
   grid-column: 1 / -1;
   margin-top: 0;
@@ -1112,7 +1108,6 @@ form legend {
   margin-top: 1rem;
 }
 
-/* Responsividade */
 @media (max-width: 600px) {
   .form-buttons {
     flex-direction: column;
@@ -1135,7 +1130,6 @@ form legend {
   padding: 2rem;
 }
 
-/* Elementos que devem ocupar as 2 colunas */
 .form-grid h1,
 .form-grid p,
 .form-grid hr,
@@ -1145,21 +1139,17 @@ form legend {
   grid-column: 1 / -1;
 }
 
-/* Upload ocupa uma coluna inteira */
 .upload-box {
   grid-column: 1 / -1;
 }
 
-/* Ajustes para o grid do formulário */
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* Duas colunas de largura igual */
   gap: 1.5rem 2rem;
   padding: 2rem;
 }
 
-/* Elementos que ocupam as 2 colunas */
 .form-grid h1,
 .form-grid p,
 .form-grid hr,
@@ -1169,7 +1159,6 @@ form legend {
   grid-column: 1 / -1;
 }
 
-/* Container principal que segura gênero e textarea lado a lado */
 .genero-textarea-container {
   grid-column: 1 / -1;
   display: grid;
@@ -1200,4 +1189,22 @@ form legend {
   width: 18px;
   height: 18px;
   margin: 0;
+}
+
+.darkmode footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #2d593f;
+  color: white;
+  width: 100%;
+  font-size: calc(1rem * var(--font-scale));
+}
+
+.high-contrast footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #000000;
+  color: white;
+  width: 100%;
+  font-size: calc(1rem * var(--font-scale));
 }

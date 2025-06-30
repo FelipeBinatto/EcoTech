@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
     themeMode = mode;
     showIconForNextTheme(mode);
 
-    // Pop-up para o modo contraste, aparece apenas uma vez por sessão
     let popup = document.getElementById('contrast-popup');
 
     if (!popup) {
@@ -55,7 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
       document.body.appendChild(popup);
     }
 
-    // Limpa timeout anterior se existir
     if (popup.hideTimeout) {
       clearTimeout(popup.hideTimeout);
       popup.hideTimeout = null;

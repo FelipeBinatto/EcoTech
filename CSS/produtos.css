@@ -90,7 +90,7 @@ footer {
     background-color: #468236;
     color: white;
     width: 100%;
-    font-size: 1rem;
+    font-size: calc(1rem * var(--font-scale));
 }
 
 #menu-toggle {
@@ -235,7 +235,6 @@ footer {
 
 .container-images {
     position: relative;
-    /* importante */
     width: 400px;
     height: 300px;
     overflow: hidden;
@@ -245,7 +244,6 @@ footer {
 
 .slider {
     position: absolute;
-    /* mudar para absolute */
     top: 0;
     left: 0;
     width: 100%;
@@ -264,7 +262,6 @@ footer {
 .slider.on {
     opacity: 1;
     z-index: 10;
-    /* traz a imagem visível para cima */
 }
 
 .slider img {
@@ -277,10 +274,10 @@ footer {
 
 .slider figcaption {
     position: absolute;
-    top: 0;       /* mudar bottom:0 para top:0 */
-    left: 0;      /* ocupar desde a esquerda */
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100%; /* ocupar altura total */
+    height: 100%;
     background: rgba(0, 0, 0, 0.6);
     color: #ffffff;
     display: flex;
@@ -292,12 +289,12 @@ footer {
     opacity: 0;
     transition: opacity 0.3s ease;
     text-align: center;
-    border-radius: 20px; /* arredondar toda a borda */
+    border-radius: 20px;
     pointer-events: auto;
     box-sizing: border-box;
 }
 
-.high-contrast .slider figcaption{
+.high-contrast .slider figcaption {
     color: #00ffff;
 }
 
@@ -449,8 +446,6 @@ button,
 #decrease-font {
     font-size: 1rem;
 }
-
-/*modo auto contraste*/
 
 .high-contrast {
     --base-color: #000 !important;

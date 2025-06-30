@@ -10,11 +10,11 @@
 </head>
 
 <body>
-    <form id="formulario" method="post" action="#">
+    <form id="formulario" method="post">
         <!-- Botões de fonte -->
         <div id="font-buttons">
-            <button id="decrease-font">A-</button>
-            <button id="increase-font">A+</button>
+            <button id="decrease-font" type="button">A-</button>
+            <button id="increase-font" type="button">A+</button>
         </div>
 
         <!-- Navegação -->
@@ -60,7 +60,6 @@
             <p>Preencha o formulário para podermos avaliar seu produto</p>
             <hr>
 
-            <!-- DADOS PESSOAIS -->
             <div class="campo">
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome" id="nome" required />
@@ -145,42 +144,40 @@
                 <input type="text" name="CEP" id="CEP" required pattern="\d{5}-?\d{3}" maxlength="9" />
             </div>
 
-                <!-- outros campos -->
+            <div class="genero-textarea-container">
+                <div class="campo textarea-container">
+                    <label for="descricao">Descreva seu produto</label>
+                    <textarea id="descricao" name="descricao" rows="6" required></textarea>
+                    <small id="contador-caracteres">0/500 caracteres</small>
+                </div>
 
-                <div class="genero-textarea-container">
-                    <div class="campo textarea-container">
-                        <label for="descricao">Descreva seu produto</label>
-                        <textarea id="descricao" name="descricao" rows="6" required></textarea>
-                        <small id="contador-caracteres">0/500 caracteres</small>
-                    </div>
-
-                    <div class="campo genero-container">
-                        <label>Gênero:</label>
-                        <div id="genero-group">
-                            <div>
-                                <label for="feminino"><span>Feminino</span>
-                                    <input type="radio" id="feminino" name="genero" value="Feminino" required />
-                                </label>
-                            </div>
-                            <div>
-                                <label for="masculino"><span>Masculino</span>
-                                    <input type="radio" id="masculino" name="genero" value="Masculino"/>
-                                </label>
-                            </div>
-                            <div>
-                                <label for="outro"><span>Outro</span>
-                                    <input type="radio" id="outro" name="genero" value="Outro"/>
-                                </label>
-                            </div>
-                            <div>
-                                <label for="prefiro-nao-informar"><span>Prefiro não informar</span>
-                                    <input type="radio" id="prefiro-nao-informar" name="genero"
-                                        value="Prefiro não informar" />
-                                </label>
-                            </div>
+                <div class="campo genero-container">
+                    <label>Gênero:</label>
+                    <div id="genero-group">
+                        <div>
+                            <label for="feminino"><span>Feminino</span>
+                                <input type="radio" id="feminino" name="genero" value="Feminino" />
+                            </label>
+                        </div>
+                        <div>
+                            <label for="masculino"><span>Masculino</span>
+                                <input type="radio" id="masculino" name="genero" value="Masculino" />
+                            </label>
+                        </div>
+                        <div>
+                            <label for="outro"><span>Outro</span>
+                                <input type="radio" id="outro" name="genero" value="Outro" />
+                            </label>
+                        </div>
+                        <div>
+                            <label for="prefiro-nao-informar"><span>Prefiro não informar</span>
+                                <input type="radio" id="prefiro-nao-informar" name="genero" value="Prefiro não informar"
+                                    required />
+                            </label>
                         </div>
                     </div>
                 </div>
+            </div>
 
             <div class="upload-box" style="grid-column: 1 / -1;">
                 <label for="foto">Foto do item:</label>
@@ -196,11 +193,13 @@
             <ul id="lista-pontos" style="grid-column: 1 / -1;"></ul>
         </main>
     </form>
+     <footer>EcoTech | Itu-SP Telefone: (11) 99678-3467</footer>
 
-    <script src="JS/menu.js"></script>
-    <script src="JS/forms.js"></script>
-    <script src="JS/api.js"></script>
-    <script src="JS/font.js"></script>
+
 </body>
+<script src="JS/menu.js"></script>
+<script src="JS/forms.js"></script>
+<script src="JS/api.js"></script>
+<script src="JS/font.js"></script>
 
 </html>
