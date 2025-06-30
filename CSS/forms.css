@@ -1208,3 +1208,7 @@ form legend {
   width: 100%;
   font-size: calc(1rem * var(--font-scale));
 }
+
+.darkmode #contador-caracteres{
+  color: white;
+}
