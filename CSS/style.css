@@ -1063,12 +1063,10 @@ html[data-theme="contrast"] #theme-switch svg:nth-child(2) {
     opacity: 1;
   }
 
-
   .membro {
     flex: 1 1 calc(50% - 20px);
     max-width: calc(50% - 20px);
   }
-
 
   p {
     font-size: 16 1rem;

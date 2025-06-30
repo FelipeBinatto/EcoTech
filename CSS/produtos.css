@@ -235,26 +235,77 @@ footer {
 
 .container-images {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* importante */
     width: 400px;
     height: 300px;
     overflow: hidden;
 }
 
+
+
 .slider {
-    opacity: 0;
-    transition: opacity 0.2s;
     position: absolute;
+    /* mudar para absolute */
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
     border-radius: 20px;
-    object-fit: cover;
-    image-rendering: auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #000;
 }
 
-.on {
+.slider.on {
+    opacity: 1;
+    z-index: 10;
+    /* traz a imagem visível para cima */
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+.slider figcaption {
+    position: absolute;
+    top: 0;       /* mudar bottom:0 para top:0 */
+    left: 0;      /* ocupar desde a esquerda */
+    width: 100%;
+    height: 100%; /* ocupar altura total */
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: calc(1rem * var(--font-scale));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    border-radius: 20px; /* arredondar toda a borda */
+    pointer-events: auto;
+    box-sizing: border-box;
+}
+
+.high-contrast .slider figcaption{
+    color: #00ffff;
+}
+
+.slider:hover figcaption {
+    opacity: 1;
+}
+
+F .on {
     opacity: 1;
 }
 
@@ -542,9 +593,9 @@ footer {
 }
 
 .high-contrast #menu-toggle {
-  background-color: #000 !important;
-  color: #ffff00 !important;
-  fill: #ffff00 !important;
+    background-color: #000 !important;
+    color: #ffff00 !important;
+    fill: #ffff00 !important;
 }
 
 
@@ -699,4 +750,18 @@ footer {
         align-items: center;
     }
 
+    #menu-toggle:hover {
+        color: #1abc9c;
+    }
+
+}
+
+.menu ul li a:hover {
+    color: #1abc9c;
+    border-bottom: 2px solid #1abc9c;
+}
+
+.card p,
+.card h3 {
+    font-size: calc(1rem * var(--font-scale));
 }

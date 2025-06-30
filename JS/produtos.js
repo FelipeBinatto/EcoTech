@@ -35,6 +35,10 @@ function prevSlider() {
 bntNext.addEventListener('click', nextSlider);
 bntPrev.addEventListener('click', prevSlider);
 
+setInterval(() => {
+  nextSlider();
+}, 8000);
+
 const themeSwitch = document.getElementById('theme-switch');
 
 let themeMode = localStorage.getItem('themeMode') || 'light';
