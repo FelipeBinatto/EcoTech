@@ -237,6 +237,7 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: #346329;
+  transform: translateY(-2px);
 }
 
 #menu-toggle {
