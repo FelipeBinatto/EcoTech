@@ -1,120 +1,137 @@
-# Projeto EcoTech — Reciclagem de Lixo Eletrônico com Recompensas Sustentáveis
+# 🌱 Projeto EcoTech — Reciclagem de Lixo Eletrônico com Recompensas Sustentáveis
 
-## 1. Como nasceu a ideia
+A **EcoTech** é uma iniciativa sustentável criada para combater o descarte incorreto de lixo eletrônico, unindo preservação ambiental e benefícios para a população.
 
-A EcoTech surgiu da preocupação com o descarte incorreto de eletrônicos como celulares, computadores e eletrodomésticos.  
-Pensamos em criar uma solução que ajudasse o meio ambiente e, ao mesmo tempo, beneficiasse as pessoas.
-
-A proposta é simples:  
-*O cliente entrega o lixo eletrônico e recebe descontos em lojas parceiras.*
+Nossa proposta é simples e eficiente:  
+O cliente entrega equipamentos eletrônicos usados e recebe descontos em lojas parceiras.
 
 ---
 
-## 2. Como a EcoTech ajuda o meio ambiente
+## 💡 Como Nasceu a Ideia
 
-- Evita que metais pesados contaminem o solo e a água.
-- Reaproveita peças e conserta equipamentos, diminuindo o lixo eletrônico.
-- Reduz o consumo de recursos naturais ao reutilizar materiais.
+A EcoTech surgiu da preocupação com o descarte inadequado de celulares, computadores e eletrodomésticos.
 
----
-
-## 3. Como a EcoTech ajuda as pessoas
-
-- O cliente ganha cupons de desconto ao entregar eletrônicos usados.
-- Equipamentos reformados voltam ao mercado, gerando economia e reduzindo o desperdício.
+Percebemos que era possível criar uma solução que:
+- Protegesse o meio ambiente  
+- Incentivasse a reciclagem  
+- Gerasse benefícios reais para as pessoas  
 
 ---
 
-## 4. Como a EcoTech funciona
+## 🌍 Como a EcoTech Ajuda o Meio Ambiente
 
-1. Entrega voluntária nos pontos de coleta.
-2. Recompensa: o cliente recebe cupons de desconto em lojas parceiras.
-3. Triagem técnica dos equipamentos recebidos.
-4. Reforma ou reaproveitamento de peças úteis.
-5. Destino correto para o que não puder ser reaproveitado.
-
----
-
-## 5. Páginas do site
-
-- **EcoTech (início):** introdução e objetivos do projeto.
-- **Sobre nós:** missão, visão e valores da empresa.
-- **Contato:** formulário para envio de dúvidas ou sugestões.
-- **Avaliação de Produto:** formulário para avaliação de aparelhos eletrônicos.
-- **EcoProdutos:** vitrine digital de produtos remanufaturados disponíveis.
+- Evita que metais pesados contaminem o solo e a água  
+- Reaproveita peças e conserta equipamentos  
+- Reduz o volume de lixo eletrônico  
+- Diminui a extração de recursos naturais  
 
 ---
 
-## 6. Tecnologias utilizadas
+## 👥 Como a EcoTech Ajuda as Pessoas
 
-### HTML — Estrutura
+- O cliente recebe cupons de desconto ao entregar eletrônicos  
+- Produtos reformados retornam ao mercado com preço acessível  
+- Incentiva o consumo consciente  
 
-- Organização semântica para melhor acessibilidade.
-- Formulários com campos de texto e upload de imagem.
-- Navegação entre páginas com menu funcional.
+---
 
-### CSS — Estilo
+## ⚙️ Como a EcoTech Funciona
 
-- **Verde:** representa sustentabilidade e meio ambiente.
-- **Azul:** remete à tecnologia e confiança.
-- **Cinza:** usado para equilíbrio visual e destaque de elementos neutros.
-- Layout moderno e responsivo, adaptado a diferentes dispositivos.
-- Animações suaves para melhorar a navegação e experiência do usuário.
+1. Entrega voluntária nos pontos de coleta  
+2. Recebimento de cupom de desconto  
+3. Triagem técnica dos equipamentos  
+4. Reforma ou reaproveitamento de peças  
+5. Destinação ambientalmente correta do que não puder ser reutilizado  
 
-- **Tema Claro:** ideal para navegação diurna com boa visibilidade.
-- **Tema Escuro:** reduz o cansaço visual em ambientes com pouca luz.
-- **Tema de Alto Contraste:** voltado para pessoas com deficiência visual ou baixa visão.
+---
 
-### JavaScript — Interatividade
+## 🖥 Páginas do Site
 
-- Exibição de mensagem no envio do formulário:  
-  *"Enviaremos um e-mail de resposta em até 7 dias úteis."*
-- Botões para aumentar e diminuir o tamanho da fonte, promovendo acessibilidade.
-- Alternância entre temas visualmente integrados (claro, escuro e alto contraste).
-- Menu hambúrguer ativado automaticamente em telas menores.
-- Carrossel dinâmico na página **EcoProdutos**, exibindo produtos remanufaturados como:
+- **EcoTech (Início)** — Introdução e objetivos do projeto  
+- **Sobre Nós** — Missão, visão e valores  
+- **Contato** — Formulário para dúvidas e sugestões  
+- **Avaliação de Produto** — Avaliação de aparelhos eletrônicos  
+- **EcoProdutos** — Vitrine digital de produtos remanufaturados  
+
+---
+
+## 🛠 Tecnologias Utilizadas
+
+### 🔹 HTML
+- Estrutura semântica
+- Formulários com campos de texto e upload de imagem
+- Navegação entre páginas com menu funcional
+
+### 🔹 CSS
+Cores principais:
+- **Verde** — Sustentabilidade  
+- **Azul** — Tecnologia e confiança  
+- **Cinza** — Equilíbrio visual  
+
+Recursos:
+- Layout moderno e responsivo  
+- Animações suaves  
+- Tema Claro  
+- Tema Escuro  
+- Tema de Alto Contraste (acessibilidade)
+
+### 🔹 JavaScript
+- Mensagem automática após envio de formulário  
+- Controle de aumento e diminuição de fonte  
+- Alternância entre temas  
+- Menu hambúrguer responsivo  
+- Carrossel dinâmico na página EcoProdutos com:
+
   - Headsets  
   - Teclados  
   - Mouses  
   - Webcams  
   - Monitores  
   - Fones de ouvido  
-  - Caixas de som
+  - Caixas de som  
 
 ---
 
-## 7. Acesse o site
+## 🌐 Acesse o Site Online
 
-Acesse diretamente via GitHub Pages:  
-https://felipebinatto.github.io/EcoTech/
+Disponível via GitHub Pages:
+
+👉 https://felipebinatto.github.io/EcoTech/
+
+Repositório no GitHub:
+
+👉 https://github.com/FelipeBinatto/EcoTech0905
 
 ---
 
-## 8. Executar o projeto localmente
+## 💻 Executar o Projeto Localmente
 
-### Passo a passo
+### 🔽 Baixar os arquivos
 
-1. **Baixar os arquivos:**
-   - Repositório:  
-     https://github.com/FelipeBinatto/EcoTech0905
-   - Clique em **Code** > **Download ZIP**
-   - Extraia os arquivos em uma pasta do seu computador.
+1. Acesse o repositório no GitHub  
+2. Clique em **Code > Download ZIP**  
+3. Extraia os arquivos  
 
-2. **Abrir o projeto:**
-   - Clique duas vezes no arquivo `index.html` ou abra com o navegador de sua preferência.
-   - O site será exibido normalmente, mesmo sem internet.
+### ▶️ Abrir o projeto
 
+Abra o arquivo `index.html` no navegador.  
+O site funciona normalmente mesmo sem internet.
 
-## Vídeo de apresentação do projeto https://drive.google.com/file/d/1lnH_PEberWn6ft_JoK8T2THsOHVAHxsk/view?usp=drivesdk
+---
 
+## 🧰 (Opcional) Clonar com Git
 
-### Requisitos
-
-- Nenhum programa obrigatório.
-- Recomendado: Visual Studio Code para editar e visualizar o código.
-
-### (Opcional) Clonar com Git
-
-```bash
+```
 git clone https://github.com/FelipeBinatto/EcoTech0905.git
 cd EcoTech0905
+```
+
+---
+
+## 🎥 Vídeo de Apresentação
+
+https://drive.google.com/file/d/1lnH_PEberWn6ft_JoK8T2THsOHVAHxsk/view
+
+---
+
+📌 Projeto desenvolvido para fins educacionais.
